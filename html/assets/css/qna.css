@@ -1,0 +1,94 @@
+.qna__contents {
+    margin: 470px 150px 80px 150px;
+}
+
+.qna__contents p {
+    width: 100%;
+    text-align: center;
+    color: #999;
+    line-height: 1.4;
+    font-size: 18px;
+    font-weight: 500;
+    padding-top: 10px;
+    padding-bottom: 80px;
+}
+
+.qna__btn {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.qna__btn .btn {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    padding: 3rem 11.8rem;
+    border: 1px solid #E3E6EB;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-bottom: 60px;
+    margin-right: 60px;
+}
+
+.qna__btn .btn:hover {
+    border: 1px solid #4461f2;
+    background-color: #4461f258;
+    color: #4461f2;
+}
+
+.qna__btn .btn img {
+    width: 10rem;
+    margin-bottom: 20px;
+}
+
+.qna__btn .btn span {
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.qna__btn .btn.active {
+    border: 1px solid #4461f2;
+    background-color: #4461f258;
+    color: #4461f2;
+}
+
+.copyBtn {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    padding: 3rem 11.8rem;
+    border: 1px solid #E3E6EB;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-bottom: 60px;
+}
+
+.copyBtn img {
+    width: 10rem;
+    margin-bottom: 20px;
+}
+
+.qna__btn form input {
+    display: none;
+}
+
+.qna__btn form button {
+    font-weight: 600;
+    font-size: 1.1rem;
+    background-color: #fff;
+    text-decoration: none;
+}
+
+.copyBtn:hover {
+    border: 1px solid #4461f2;
+    background-color: #4461f258;
+    color: #4461f2;
+}

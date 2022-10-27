@@ -1,0 +1,334 @@
+.header .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.logo img {
+    width: 76px;
+}
+
+/* join */
+.join__inner {
+    margin-bottom: 60px;
+}
+
+.join__step {
+    margin-top: 70px;
+    color: #BEC1C6;
+    font-size: 1.1rem;
+    font-weight: 700;
+    position: relative;
+}
+
+.join__step em {
+    color: #4461F2;
+}
+
+.join__step::before {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: -1rem;
+    width: 100%;
+    height: 2px;
+    background-color: #E3E6EB;
+}
+
+.join__step::after {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: -1rem;
+    width: 0;
+    height: 2px;
+    background-color: #4461f2;
+}
+
+.join__step.active1::after {
+    width: 25%;
+}
+
+.join__step.active2::after {
+    width: 50%;
+}
+
+.join__step.active3::after {
+    width: 75%;
+}
+
+.join__step.active4::after {
+    width: 100%;
+}
+
+.join__desc h1 {
+    padding: 80px 0 60px 0;
+    line-height: 1.4;
+    font-size: 2.2rem;
+    font-weight: 800;
+    text-shadow: -0.3px 0 #000, 0 0.3px #000, 0.3px 0 #000, 0 -0.3px #000;
+}
+
+.join__desc h1 span {
+    color: #4461f2;
+    text-shadow: -0.3px 0 #4461f2, 0 0.3px #4461f2, 0.3px 0 #4461f2, 0 -0.3px #4461f2;
+}
+
+.join__desc p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 60px;
+    box-sizing: border-box;
+}
+
+.join__btn {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.join__btn .btn {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    padding: 3rem 11.8rem;
+    border: 1px solid #E3E6EB;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-bottom: 60px;
+}
+
+.join__btn .btn:hover {
+    border: 1px solid #4461f2;
+}
+
+.join__btn .btn img {
+    width: 10rem;
+    margin-bottom: 20px;
+}
+
+.join__btn .btn span {
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.join__btn .btn.active {
+    border: 1px solid #4461f2;
+    background-color: #4461f258;
+    color: #4461f2;
+}
+
+/* join__agree */
+.join__agree {
+    margin-bottom: 60px;
+}
+
+.join__agree .agree {
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.join__agree details {
+    border-radius: 10px;
+}
+
+.join__agree summary {
+    padding: 1.5rem;
+    background-color: #F9FAFC;
+    font-size: 1.12rem;
+    font-weight: 700;
+}
+
+.join__agree .desc {
+    background-color: #F9FAFC;
+    padding: 0 30px;
+    color: #666;
+    font-weight: 300;
+    line-height: 1.5;
+    height: 200px;
+    overflow-y: scroll;
+    font-size: 1.1rem
+}
+
+.join__agree .check {
+    position: absolute;
+    content: '';
+    top: 25px;
+    right: 1.5rem;
+
+}
+
+.join__Nbtn {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1.2rem 8rem;
+    border-radius: 10px;
+    background-color: #4461f2;
+    color: #fff;
+    margin: auto;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* join__inner */
+.join__inner legend {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden
+}
+
+.join__box>div {
+    margin-bottom: 5rem;
+    border-bottom: 1px solid #E3E6EB;
+}
+
+.join__box>div:last-child {
+    border: 0;
+}
+
+.youInfo>div, .storeInfo>div, .moreover>div {
+    margin-bottom: 3rem;
+}
+
+.youInfo>div:last-child, .storeInfo>div:last-child, .moreover>div:last-child {
+    margin-bottom: 5rem;
+}
+
+.join__box label {
+    display: block;
+    font-size: 1.3rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.join__box input {
+    border: 0;
+    background-color: #F9FAFC;
+    width: 100%;
+    border-radius: 10px;
+    padding: 1.5rem;
+    font-size: 1rem;
+    font-weight: 300;
+    box-sizing: border-box;
+}
+
+.join__box .overlap {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.overlap label {
+    width: 100%;
+}
+
+.overlap input {
+    width: 78%;
+}
+
+.overlap .check {
+    width: 20%;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 65px;
+    background-color: #4461f22f;
+    color: #fff;
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+
+.overlap .check:hover {
+    background-color: #4461f2;
+}
+
+.join__box .msg {
+    width: 100%;
+    padding: 5px;
+    color: red;
+}
+
+.moreover {
+    border-bottom: 0;
+}
+
+
+ 
+
+
+.youGd {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.youGd label {
+    display: block;
+    width: 100%;
+}
+
+.youGd .btn {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    padding: 3rem 11.8rem;
+    border: 1px solid #E3E6EB;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-bottom: 60px;
+}
+
+.youGd .btn:hover {
+    border: 1px solid #4461f2;
+}
+
+.youGd .btn.active {
+    border: 1px solid #4461f2;
+    background-color: #4461f22f;
+    color: #4461f2;
+}
+
+.youGd .btn img {
+    width: 10rem;
+    margin-top: -20px;
+    margin-bottom: 20px;
+}
+
+.youGd .btn span {
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+/* join__result */
+.join__result {
+    margin-bottom: 100px;
+    text-align: center;
+}
+.join__result img {
+    width: 25rem;
+    margin-bottom: 60px;
+}
+.join__result .btn {
+    display: inline-block;
+
+}
+.join__result .btn a {
+    padding: 1.2rem 8rem;
+    margin: 2rem;
+    border-radius: 10px;
+    background-color: #4461f2;
+    color: #fff;
+}

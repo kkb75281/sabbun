@@ -1,0 +1,64 @@
+#faq {
+    margin: 470px 50px 80px 50px;
+}
+.faq__contents details {
+    width: 100%;
+    padding: 40px;
+    margin-bottom: 50px;
+    background-color: #F9FAFC;
+    border-radius: 20px;
+    box-sizing: border-box;
+    transition: all 0.3s;
+    position: relative;
+}
+.faq__contents details[open] {
+    background-color: #fff;
+    border: 1px solid #E3E6EB;
+}
+.faq__contents details:hover {
+    box-shadow: 5px 5px 30px 3px #4461f22f;
+}
+.faq__contents details summary {
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 800;
+    color: #333;
+}
+summary::marker {
+    content: '';
+}
+summary:after {
+    background: #F9FAFC;
+    content: "+";
+    color: #000;
+    float: right;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    width: 30px;
+}
+
+details[open] summary:after {
+    content: "+";
+    rotate: 45deg;
+    background: #fff;
+}
+/* .faq__contents details summary::marker {
+    position: absolute;
+    content: '+';
+    right: 0;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    background-image: url("data:image/svg+xml,%3csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M16.25 6.25V14.375H24.375V16.25H16.25V24.375H14.375V16.25H6.25V14.375H14.375V6.25H16.25Z' fill='black'/%3e%3c/svg%3e");
+}
+.faq__contents details[open] summary::marker {
+    background-image: url("data:image/svg+xml,%3csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M16.25 6.25V14.375H24.375V16.25H16.25V24.375H14.375V16.25H6.25V14.375H14.375V6.25H16.25Z' fill='black'/%3e%3c/svg%3e");
+    content: 'x';
+} */
+.faq__contents details p {
+    padding-top: 20px;
+    color: #888;
+    font-size: 18px;
+    line-height: 1.4;
+}

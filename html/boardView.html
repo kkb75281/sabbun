@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>board</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/fonts.css">
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/board.css">
+
+    <!-- META -->
+    <meta name="author" content="webstoryboy">
+    <meta name="description" content="PHP 사이트 만들기입니다.">
+    <meta name="keyword" content="사이트, 만들기, 튜토리얼, 웹스토리보이">
+    <meta name="robots" content="all">
+
+    <!-- ICON -->
+    <link rel="icon" href="assets/img/icon_256.png" />
+    <link rel="shortcut icon" href="assets/img/icon_256.png" />
+    <link rel="icon" type="image/png" sizes="256x256" href="assets/img/icon_256.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/icon_192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/icon_32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/icon_16.png" />
+</head>
+
+<body>
+    <header id="headerType" class="header__wrap nanum">
+        <div class="header__inner">
+            <div class="header__logo">
+                <a href="main.html">
+                    <img src="assets/img/temp_logo.svg" alt="사뿐소품 로고">
+                </a>
+            </div>
+            <nav class="header__menu clearfix">
+                <ul>
+                    <li><a href="#sliderType">사뿐소품이란?</a></li>
+                    <li><a href="sopumList.html">소품샵 리스트</a></li>
+                    <li><a href="board.html">커뮤니티</a></li>
+                    <li><a href="myPage.html">마이페이지</a></li>
+                    <li><a href="faq.html">고객센터</a></li>
+                </ul>
+            </nav>
+            <div class="header__member clearfix">
+                <ul>
+                    <li><a href="login.html">로그인</a></li>
+                    <li><a href="join1.html">회원가입</a></li>
+                </ul>
+            </div>
+            <div class="header__search clearfix">
+                <form action="headerSearch.php" name="headerSearch" method="get">
+                    <fieldset>
+                        <legend>검색 영역</legend>
+                        <input type="search" name="searchKeyword" id="searchKeyword" placeholder="검색어를 입력하세요 !" aria-label="search" required>
+                        <button type="submit" class="searchBtn">
+                            <img src="assets/img/search_icon.svg" alt="검색버튼">
+                        </button>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="header__ham">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+    <!-- // headerType -->
+
+    <main id="main">
+        <section id="board" class="board__wrap container">
+            <h2>게시판 보기 영역입니다.</h2>
+            <div class="board__inner">
+                <div class="board__title">
+                    <h3>Free Board</h3>
+                    <p>자유 게시판 게시글 보기입니다.</p>
+                </div>
+                <div class="board__view">
+                    <h3>[공지] 2021년 겨울 공지사항입니다.</h3>
+                    <div class="board__view__head">
+                        <img src="https://cdn.imweb.me/thumbnail/20220905/d0de34bf2fde8.jpg" alt="">
+                        <p>또우너</p>
+                        <span>Free Board</span>
+                        <span>2021-11-08</span>
+                        <span>조회수 444</span>
+                    </div>
+                    <div class="board__view__contents">
+                        <p>
+                            <img src="https://cdn.imweb.me/upload/S20191121352905b2bd341/4e8a9280f8f32.png" alt=""
+                                style="width:auto">
+                            <br>
+                            <br>
+                            이 무언가는 한자어다. '無言歌' 라고 쓰며, '가사가 없는 노래', '말 없이 부르는 노래'라는 뜻이다. <br>
+                            대중가요 중에도 무언가라는 이름의 곡들이 있다(가사가 있는건 함정). <br>
+                            대개의 경우에는 피아노곡 중에 이런 이름을 붙이는데 대표적으로 멘델스존과 포레, 차이코프스키의 곡들이 있다. <br>
+                            멘델스존은 평생에 걸쳐 무언가를 작곡했으며, 멘델스존의 무언가는 6곡씩 8권으로 묶은 48곡과 <br>
+                            작품 번호 없이 출판된 1곡,
+                            첼로와 피아노를 위한 무언가 1곡을 포함하여 총 50곡에 이른다. <br>
+                            유명한 곡으로는 '사냥의 노래', '베네치아의 뱃노래'[1], '봄의 노래[2]' 정도가 있다. <br>
+                            참고로 '사냥의 노래', '봄의 노래' 등의 각 곡에 붙은 표제들은 후세 사람들에 의해 붙여진 것들이 대부분이고  <br>멘델스존이 직접 표제를 붙인 곡은 3곡의
+                            '베네치아의 뱃노래'(Op.19-6, Op.30-6, Op.62-5)와 '이중창'(Op.38-6) 4곡 뿐이다. <br>
+                            포레의 무언가 중에 가장 유명한 것은 3개의 로망스 중 3번째 곡이다. 피아니스트 백건우의 연주로 들어보자. <br>
+                            이 곡이 타이틀로 수록된 앨범이 발매된
+                            이후 파리 어느 노천 카페에 앉아 있던 백건우에게 어느 노신사가 인사를 하며 <br>"당신이 연주한 포레를 듣기 위해 아직까지 살아있었나 봅니다"라고 말했다는
+                            일화가 있다. <br>
+                            참조.
+                            이 외에도 뉴에이지 음악가인 앙드레 가뇽도 무언가를 1곡 남겼는데, 제목 그대로 '무언가'다. 가뇽의 곡답게 매우 서정적이고 슬픈 분위기가 난다.
+
+                        </p>
+
+                        
+                        <span><a href="#">❤️</a>7 </span>
+                        <span><a href="#">💬</a>4 </span>
+                        <span class="tool"><a href="#">🦿</a></span>
+                    </div>
+                    <div class="board__view__comment">
+                        <div>
+                            <img src="https://cdn.imweb.me/thumbnail/20220905/d0de34bf2fde8.jpg" alt="">
+                        </div>
+                        <div>
+                            <div>
+                                <span class="name">김성연</span>
+                                <span>2021-11-08 20:14</span>
+                            </div>
+                            <div>
+                                <p>와 열심히 할게요</p>
+
+                            </div>
+                            <div class="board__view__comment__modify">
+                                <span>댓글 /</span>
+                                <span>수정 /</span>
+                                <span>지우기</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="board__view__comment comment last">
+                        <div class="bvcc">↪️</div>
+                        <div>
+                            <img src="https://cdn.imweb.me/thumbnail/20220905/d0de34bf2fde8.jpg" alt="">
+                        </div>
+                        <div>
+                            <div>
+                                <span class="name">열일하는 지아</span>
+                                <span>2021-11-08 20:14</span>
+                            </div>
+                            <div>
+                                <p>꺄~ 잘부탁드립니다</p>
+
+                            </div>
+                            <div class="board__view__comment__modify">
+                                <span>댓글</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="board__view__comment__write">
+                        <input type="text" placeholder=" 이름">
+                        <input type="password" placeholder=" 비밀번호">
+                        <textarea title="댓글을 남겨주세요" placeholder="댓글을 남겨주세요" rows="1" name="body" id="comment_body" data-action="btn_c_p2021110885356b873902d" data-autosize-on="true" style="overflow: hidden; overflow-wrap: break-word;"></textarea>
+                        </textarea>
+                        <div class="board__view__comment__write__imging">🖼️</div>
+                        <div class="board__view__comment__write__btn">작성</div>
+                    </div>
+                </div>
+                <div class="board__view__updownlist">
+                    <div><span>△</span> [공지] 멤버십 서비스 오픈안내</div>
+                    <div><span>▽</span> 7기 우수 크루를 발표합니다.</div>
+                </div>
+
+                <div class="board__view__btn">
+                    <a class="modify" href="#">수정</a>
+                    <a class="delete" href="#">삭제</a>
+                    <a class="list" href="#">목록</a>
+                </div>
+            </div>
+        </section>
+        <!-- //board -->
+
+
+    </main>
+    <!-- //main -->
+
+    <footer id="footer__type" class="footer__wrap nanum">
+        <div class="footer__inner container">
+            <div class="footer__menu">
+                <ul>
+                    <h4>고객센터</h4>
+                    <div class="footer__cs">
+                        <li class="footer__cscenter">sabbunsopum@gmail.com</li>
+                        <li><span>홈페이지 내 1:1 상담 또는 이메일을 통해 문의를 받고 있습니다.</span></li>
+                    </div>
+                </ul>
+                <ul>
+                    <h4>사뿐소품</h4>
+                    <li><a href="#">브랜드스토리</a></li>
+                    <li><a href="#">이용안내</a></li>
+                    <li><a href="#">연혁</a></li>
+                </ul>
+                <ul>
+                    <h4>고객지원</h4>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">자주하는 질문</a></li>
+                    <li><a href="#">1:1 상담</a></li>
+                </ul>
+                <ul>
+                    <h4>개인정보</h4>
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#">개인정보처리방침</a></li>
+                </ul>
+                <p>
+                    Copyright © 사뿐소품. All rights reserved.
+                </p>
+            </div>
+            <div class="footer__icon">
+                <div class="footer__icon__img img1"><a href=""></a></div>
+                <div class="footer__icon__img img2"><a href=""></a></div>
+                <div class="footer__icon__img img3"><a href=""></a></div>
+                <div class="footer__icon__img img4"><a href=""></a></div>
+                <div class="footer__icon__img img5"><a href=""></a></div>
+            </div>
+        </div>
+
+    </footer>
+    <!-- // footer -->
+</body>
+
+</html>

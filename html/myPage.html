@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사뿐소품</title>
+
+    <link rel="stylesheet" href="assets/css/fonts.css">
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/myPage.css">
+</head>
+
+<body>
+    <header id="headerType" class="header__wrap nanum">
+        <div class="header__inner">
+            <div class="header__logo">
+                <a href="main.html">
+                    <img src="assets/img/temp_logo.svg" alt="사뿐소품 로고">
+                </a>
+            </div>
+            <nav class="header__menu clearfix">
+                <ul>
+                    <li><a href="#sliderType">사뿐소품이란?</a></li>
+                    <li><a href="sopumList.html">소품샵 리스트</a></li>
+                    <li><a href="board.html">커뮤니티</a></li>
+                    <li><a href="myPage.html">마이페이지</a></li>
+                    <li><a href="faq.html">고객센터</a></li>
+                </ul>
+            </nav>
+            <div class="header__member clearfix">
+                <ul>
+                    <li><a href="login.html">로그인</a></li>
+                    <li><a href="join1.html">회원가입</a></li>
+                </ul>
+            </div>
+            <div class="header__search clearfix">
+                <form action="headerSearch.php" name="headerSearch" method="get">
+                    <fieldset>
+                        <legend>검색 영역</legend>
+                        <input type="search" name="searchKeyword" id="searchKeyword" placeholder="검색어를 입력하세요 !"
+                            aria-label="search" required>
+                        <button type="submit" class="searchBtn">
+                            <img src="assets/img/search_icon.svg" alt="검색버튼">
+                        </button>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="header__ham">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+    <!-- // headerType -->
+
+    <main id="main" class="main container nanum">
+        <div id="myPage__inner" class="myPage__inner">
+            <section id="contents">
+                <div class="prof">
+                    <img src="assets/img/board__icon.svg" alt="">
+                    <div class="info">
+                        <h2>권규비 님</h2>
+                        <ul>
+                            <li>손님 회원</li>
+                            <li>kkb7528@naver.com</li>
+                            <li>010-0000-0000</li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="myPageModify" class="myPageModify">
+                    <div class="myPage__inner">
+                        <form action="myPageModify.php" name="modify" method="post" enctype="multipart/form-data"
+                            onsubmit="return modifyChecks()">
+                            <fieldset>
+                                <legend class="ir">회원정보수정</legend>
+                                <div class="modify__box">
+                                    <div class="youInfo">
+                                        <div class="disabled">
+                                            <label for="youName">이름</label>
+                                            <input type="text" id="youName" name="youName" maxlength="5"
+                                                placeholder="<?=$memberInfo['youName'];?>" disabled>
+                                        </div>
+                                        <div class="disabled">
+                                            <label for="youNickName">닉네임</label>
+                                            <input type="text" id="youNickName" name="youNickName"
+                                                placeholder="<?=$memberInfo{'youNickName'}?>" disabled>
+                                        </div>
+                                        <div class="disabled">
+                                            <label for="youEmail">이메일</label>
+                                            <input type="email" id="youEmail" name="youEmail"
+                                                placeholder="<?=$memberInfo{'youEmail'}?>" disabled>
+                                        </div>
+                                        <div class="overlap">
+                                            <label for="youPass">비밀번호</label>
+                                            <input type="password" id="youPass" name="youPass" maxlength="20"
+                                                placeholder="" required>
+                                            <a class="check" href="changePw.php">변경하기</a>
+                                            <p class="msg" id="youPassComment">
+                                                <!-- * 비밀번호는 특수기호, 숫자가 필수로 들어가야 합니다. -->
+                                            </p>
+                                        </div>
+                                        <div>
+                                            <label for="youPassC">비밀번호 확인</label>
+                                            <input type="password" id="youPassC" name="youPassC" maxlength="20"
+                                                placeholder="" required>
+                                            <p class="msg" id="youPassCComment">
+                                                <!-- * 비밀번호가 일치하지 않습니다. -->
+                                            </p>
+                                        </div>
+                                        <div>
+                                            <label for="youPhone">휴대폰 번호</label>
+                                            <input type="text" id="youPhone" name="youPhone" maxlength="15"
+                                                placeholder="<?=$memberInfo{'youPhone'}?>"
+                                                value="<?=$memberInfo{'youPhone'}?>" required>
+                                            <p class="msg" id="youPhoneComment">
+                                                <!-- * 형식이 맞지 않습니다.(010-0000-0000) -->
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="moreover">
+                                        <div class="youImg">
+                                            <label for="blogFile">프로필 이미지</label>
+                                            <input type="file" name="blogFile" id="blogFile"
+                                                accept=".jpg, .jpeg, .png, .gif"
+                                                placeholder="jpg, jpeg, png, gif 파일만 넣어주세요!">
+                                        </div>
+                                        <div class="youGd">
+                                            <label for="youGender">성별</label>
+                                            <div class="btn men">
+                                                <img src="assets/img/boy-dynamic-color@3x.png" alt="남성">
+                                                <span>남성</span>
+                                            </div>
+                                            <div class="btn women">
+                                                <img src="assets/img/girl-dynamic-color@3x.png" alt="여성">
+                                                <span>여성</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="modify__Nbtn" type="submit">수정하기</button>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            <section id="aside">
+                <div class="goWrite">
+                    <p>나만 알고 있는 나만의 팁이 있다면 함께 공유하고 새로운 팁도 얻어가세요 !</p>
+                    <a href="myTip.html"></a>
+                </div>
+                <div class="goMenu">
+                    <h3>마이페이지</h3>
+                    <ul>
+                        <li class="active"><a href="myPage.html">회원 정보 수정</a></li>
+                        <li><a href="myPageBoard.html">게시물</a></li>
+                        <li><a href="myPageLike.html">관심 리스트</a></li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <div class="goTop">
+        <button>
+            top
+        </button>
+    </div>
+    <!-- // top 버튼 -->
+
+    <footer id="footer__type" class="footer__wrap nanum">
+        <div class="footer__inner container">
+            <div class="footer__menu">
+                <ul>
+                    <h4>고객센터</h4>
+                    <div class="footer__cs">
+                        <li class="footer__cscenter">sabbunsopum@gmail.com</li>
+                        <li><span>홈페이지 내 1:1 상담 또는 이메일을 통해 문의를 받고 있습니다.</span></li>
+                    </div>
+                </ul>
+                <ul>
+                    <h4>사뿐소품</h4>
+                    <li><a href="#">브랜드스토리</a></li>
+                    <li><a href="#">이용안내</a></li>
+                    <li><a href="#">연혁</a></li>
+                </ul>
+                <ul>
+                    <h4>고객지원</h4>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">자주하는 질문</a></li>
+                    <li><a href="#">1:1 상담</a></li>
+                </ul>
+                <ul>
+                    <h4>개인정보</h4>
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#">개인정보처리방침</a></li>
+                </ul>
+                <p>
+                    Copyright © 사뿐소품. All rights reserved.
+                </p>
+            </div>
+            <div class="footer__icon">
+                <div class="footer__icon__img img1"><a href=""></a></div>
+                <div class="footer__icon__img img2"><a href=""></a></div>
+                <div class="footer__icon__img img3"><a href=""></a></div>
+                <div class="footer__icon__img img4"><a href=""></a></div>
+                <div class="footer__icon__img img5"><a href=""></a></div>
+            </div>
+        </div>
+    </footer>
+    <!-- // footer -->
+
+
+
+
+</body>
+
+</html>

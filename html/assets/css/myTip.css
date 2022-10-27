@@ -1,0 +1,179 @@
+/* myTip */
+
+#myTip {
+	margin-top: 170px;
+	margin-bottom: 250px;
+	padding: 0 10rem;
+}
+
+.myTip h2 {
+	text-align: center;
+	font-size: 3rem;
+	font-weight: 800;
+	color: #4461F2;
+	margin-bottom: 30px;
+}
+
+.myTip>p {
+	margin-top: 30px;
+	margin-bottom: 60px;
+	text-align: center;
+	font-size: 17px;
+	line-height: 1.5;
+}
+
+/* .myTip .more {
+	text-align: center;
+	margin-top: 50px;
+	position: relative;
+}
+.myTip .more a {
+	color: #999;
+	transition: all 0.3s;
+}
+.myTip .more a:hover {
+	color: #000;
+}
+.myTip .more span {
+	position: absolute;
+	display: block;
+	left: 50%;
+	top: 50%;
+	transform: translateX(-50%);
+	margin: 0 auto;
+	width: 84px;
+	height: 32px;
+	background-image: url(../img/more__icon.svg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	opacity: 0.5;
+} */
+.myTip__inner {
+	width: 98%;
+	margin: 0 auto;
+}
+
+.tipBox {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	/* justify-content: center; */
+	box-sizing: border-box;
+	/* display: none; */
+}
+
+.tipBox.show {
+	display: flex;
+}
+
+.t2,
+.t4 {
+	justify-content: right;
+}
+
+.tipBox span {
+	display: inline-block;
+	box-sizing: border-box;
+	font-size: 80px;
+	padding: 30px;
+}
+
+.tipBox p {
+	display: inline-block;
+	/* border: 1px solid #4461f29f; */
+	line-height: 1.4;
+	box-sizing: border-box;
+	padding: 24px 30px;
+	border-radius: 20px;
+	font-size: 18px;
+	transition: all 0.3s;
+	background-color: #4461F2;
+	color: #F9FAFC;
+}
+
+.tipBox p:hover {
+	box-shadow: 5px 5px 30px 3px #4461f22f;
+}
+
+.myTip__Write__inner {
+	border-top: 1px solid #d9d9d9;
+	width: 100%;
+	margin-bottom: 50px;
+
+}
+
+.myTip__wirte {
+	margin-top: 50px;
+	float: right;
+
+}
+
+input[type=text] {
+	display: inline-block;
+	min-width: 500px;
+	max-width: 500px;
+	/* border: 1px solid #4461f29f; */
+	line-height: 1.4;
+	box-sizing: border-box;
+	padding: 24px 30px;
+	border-radius: 20px;
+	font-size: 18px;
+	transition: all 0.3s;
+	background-color: #4461F2;
+	color: #F9FAFC;
+	border: 0;
+}
+
+input[type=text]::placeholder {
+	color: #bebebe;
+
+}
+
+.profile__Img {}
+
+.profile__select {
+	display: inline;
+}
+
+.profile__select>label {
+	font-size: 25px;
+}
+
+.profile__Upload {
+	display: inline;
+}
+
+.myTip__profileImg__Upload {
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	background: url(../img/uploadIcon10x10.svg) no-repeat center;
+	margin-top: 15px;
+	cursor: pointer;
+}
+
+.profile__Upload>#myTip__profileImg__Upload {
+	display: none;
+
+}
+
+.profile__Upload button {
+	display: inline;
+	width: 130px;
+	height: 40px;
+	background-color: #92A8D1;
+	border-radius: 10px;
+	cursor: pointer;
+	color: #fff;
+	box-sizing: border-box;
+	font-size: 18px;
+	margin: 20px 0;
+	transition: all 0.3s;
+	margin-left: 100px;
+}
+
+.profile__Upload button:hover {
+	background-color: #64789F;
+
+}

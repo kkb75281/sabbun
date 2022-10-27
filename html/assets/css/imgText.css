@@ -1,0 +1,21 @@
+/* imageText */
+.imgText__wrap {
+    padding: 115px 0;
+    box-sizing: border-box;
+}
+
+.imgText__inner {
+    /* display: flex;
+    justify-content: space-between; */
+}
+
+.imgText__article1 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 45px;
+}
+
+.imgText__article2 {
+    display: flex;
+    justify-content: space-between;
+}

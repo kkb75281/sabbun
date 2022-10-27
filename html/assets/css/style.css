@@ -1,0 +1,84 @@
+.nanum{
+    font-family: 'NanumSquare';
+    font-weight: 400;
+}
+
+body {
+    /* background-color: #F9FAFC; */
+}
+
+.main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+section {
+    width: 33.333%;
+    padding: 30px;
+    box-sizing: border-box;
+    /* background-color: #777; */
+    position: relative;
+}
+
+section::before {
+    position: absolute;
+    content: '';
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 97%;
+    background-color: #eee;
+}
+
+section:last-child::before {
+    display: none;
+}
+
+.tit {
+    text-align: center;
+    height: 100px;
+}
+
+#figma img {
+    width: 50px;
+}
+
+#html img {
+    width: 100px;
+}
+
+#php img {
+    width: 100px;
+}
+
+.cont ul h3 {
+    margin-top: 50px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.cont ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #f5f8ff;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.cont ul li a {
+    padding: 5px 9px;
+    background-color: #4461f22f;
+    color: #fff;
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+
+.cont ul li a:hover {
+    background-color: #4461f2;
+}
+

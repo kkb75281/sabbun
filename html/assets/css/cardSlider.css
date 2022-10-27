@@ -1,0 +1,65 @@
+        /* slider */
+        .cardSlider__wrap {
+
+        }
+
+        .cardSlider__wrap h2 {
+            font-size: 24px;
+            text-align: left;
+            margin-bottom: 50px;
+        }
+
+        /* 이미지 보이는 영역 */
+        .cardSlider__img {
+            width: 100%;
+            /* height: 450px; */
+            overflow: hidden;
+
+        }
+
+
+        .cardSlider{
+            margin-left: 50px;
+        }
+        
+        .cardSlider h3{
+            padding: 0 10px;
+            box-sizing: border-box;
+        }
+
+        .cardSlider span {
+            display: inline-block;
+            color: #666;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+
+        .cardSlider img {
+            width: 100%;
+
+        }
+
+
+        .cardSlider__inner {
+            /* 이미지를 감싸고 있는 부모 : 움직이는 부분 */
+            display: flex;
+            flex-wrap: wrap;
+            width: 10000px;
+            /*총 이미지 6개 */
+            position: relative;
+            left: -380px;
+            /* transition: all 0.3s; */
+        }
+
+        .cardSlider__inner.transition {
+            transition: all 0.3s;
+        }
+
+
+
+        .cardSlider {
+            /* 개별적인 이미지 */
+            position: relative;
+            width: 380px;
+        }

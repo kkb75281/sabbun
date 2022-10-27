@@ -1,0 +1,520 @@
+#myPage__inner {
+    margin: 170px 0 130px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+#contents {
+    width: 66%;
+}
+
+#aside {
+    width: 30%;
+}
+
+.prof {
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 30px 3px #4461f22f;
+    margin-bottom: 40px;
+}
+
+.prof img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    padding-right: 40px;
+    padding-left: 15px;
+}
+
+.prof .info {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.prof .info h2 {
+    width: 100%;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.prof .info ul li {
+    display: inline-block;
+    margin-right: 10px;
+    padding-right: 17px;
+    position: relative;
+}
+
+.prof .info ul li::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background-color: rgba(204, 204, 204, 0.551);
+}
+
+.prof .info ul li:last-child:before {
+    display: none;
+}
+
+.list,
+.list__like {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.list .card {
+    width: 100%;
+    height: 200px;
+    border-radius: 20px;
+    background-color: #fff;
+    margin-bottom: 30px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 30px 3px #4461f22f;
+    margin-bottom: 40px;
+    opacity: 0.5;
+    transition: all 0.3s;
+    overflow: hidden;
+    padding: 20px 30px;
+    box-sizing: border-box;
+}
+
+.list .card:hover {
+    opacity: 1;
+    transform: translateY(-5px);
+}
+
+.list .card a {
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    height: 160px;
+}
+
+.list .card figure {
+    width: 30%;
+    margin-right: 20px;
+}
+
+.list .card img {
+    max-height: 160px;
+    display: block;
+    width: auto;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.list .card .desc {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.list .card .desc h3 {
+    width: 100%;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.list .card .desc p {
+    width: 100%;
+    font-size: 18px;
+    font-weight: 300;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.list__like .card {
+    width: 30%;
+    height: 200px;
+    border-radius: 20px;
+    background-color: #4461f22f;
+    margin-bottom: 30px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 30px 3px #4461f22f;
+    margin-bottom: 40px;
+    transition: all 0.3s;
+    overflow: hidden;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.list__like .card a::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+.list__like .card p {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid #f9fafc65;
+    border-radius: 50%;
+    padding: 10px;
+    color: #f9fafc65;
+    font-size: 18px;
+    font-weight: 800;
+    opacity: 1;
+    transition: all 0.3s;
+}
+
+.list__like .card span {
+    position: absolute;
+    right: 5px;
+    bottom: 0px;
+    width: 30px;
+    height: 30px;
+    background-image: url(../img/like__eyes.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: none;
+}
+
+.list__like .card:hover {
+    transform: translateY(-5px);
+}
+
+.list__like .card a:hover::before {
+    display: block;
+}
+
+.list__like .card a:hover p {
+    color: #F9FAFC;
+    border: 2px solid #F9FAFC;
+}
+
+.list__like .card a:hover span {
+    display: block;
+    animation: wobble 1s infinite;
+}
+
+@keyframes wobble {
+    from {
+        transform: translate3d(-50%, -50%, 0);
+    }
+
+    15% {
+        transform: translate3d(-75%, -50%, 0) rotate3d(0, 0, 1, -5deg);
+    }
+
+    30% {
+        transform: translate3d(-30%, -50%, 0) rotate3d(0, 0, 1, 3deg);
+    }
+
+    45% {
+        transform: translate3d(-65%, -50%, 0) rotate3d(0, 0, 1, -3deg);
+    }
+
+    60% {
+        transform: translate3d(-40%, -50%, 0) rotate3d(0, 0, 1, 2deg);
+    }
+
+    75% {
+        transform: translate3d(-55%, -50%, 0) rotate3d(0, 0, 1, -1deg);
+    }
+
+    to {
+        transform: translate3d(-50%, -50%, 0);
+    }
+}
+
+.myPageModify {
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 30px 3px #4461f22f;
+}
+
+.myPage__inner {
+    width: 100%;
+}
+
+.modify__box .msg {
+    width: 100%;
+    padding: 5px;
+    color: red;
+}
+
+.modify__box .youInfo>div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.modify__box .youInfo label {
+    width: 20%;
+    box-sizing: border-box;
+    font-size: 18px;
+    font-weight: 800;
+    margin: auto;
+}
+
+.modify__box .youInfo input {
+    width: 80%;
+    box-sizing: border-box;
+    border: 0;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #F9FAFC;
+}
+
+.modify__box .youInfo .overlap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.modify__box .youInfo .overlap label {
+    width: 20%;
+    box-sizing: border-box;
+}
+
+.modify__box .youInfo .overlap input {
+    width: 58%;
+    margin-right: 2%;
+    box-sizing: border-box;
+}
+
+.modify__box .youInfo .overlap .check {
+    width: 20%;
+    text-align: center;
+    font-weight: 700;
+    padding: 20px;
+    background-color: #4461f22f;
+    color: #fff;
+    border-radius: 10px;
+    transition: all 0.3s;
+    box-sizing: border-box;
+}
+
+.modify__box .youInfo .overlap .check:hover {
+    background-color: #4461f2;
+}
+
+.modify__box .moreover>div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.youImg label,
+.youGd label {
+    width: 20%;
+    box-sizing: border-box;
+    font-size: 18px;
+    font-weight: 800;
+    margin: auto;
+}
+
+.youImg input {
+    width: 80%;
+    box-sizing: border-box;
+    border: 0;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #F9FAFC;
+}
+
+.youGd .btn {
+    width: 38%;
+    box-sizing: border-box;
+    border: 1px solid #E3E6EB;
+    border-radius: 10px;
+    padding: 20px;
+    transition: all 0.3s;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.youGd .btn img {
+    width: 100px;
+    margin: 0 auto;
+    display: block;
+}
+
+.youGd .btn span {
+    text-align: center;
+    display: block;
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+.youGd .btn:hover {
+    border: 1px solid #4461f2;
+}
+
+.youGd .btn.active {
+    border: 1px solid #4461f2;
+    background-color: #4461f22f;
+    color: #4461f2;
+}
+
+.youGd .men {
+    margin-right: 4%;
+}
+
+.modify__Nbtn {
+    display: block;
+    padding: 1.15rem 8rem;
+    border-radius: 10px;
+    background-color: #4461f22f;
+    color: #fff;
+    margin: 0 auto;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.modify__Nbtn:hover {
+    background-color: #4461f2;
+}
+
+.goWrite {
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    padding: 38px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 30px 3px #4461f22f;
+    background-color: #4461f282;
+    color: #fff;
+    word-break: keep-all;
+    line-height: 1.7;
+    position: relative;
+    margin-bottom: 40px;
+    transition: all 0.3s;
+}
+
+.goWrite a {
+    position: absolute;
+    right: 38px;
+    bottom: 42px;
+    width: 20px;
+    height: 20px;
+    background-image: url(../img/goto__icon2.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 1s;
+    opacity: 0.4;
+}
+
+.goWrite:hover {
+    background-color: #4461f2;
+}
+
+.goWrite:hover a {
+    opacity: 1;
+    rotate: 360deg;
+}
+
+.myInfo {
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 30px 3px #4461f22f;
+    margin-bottom: 40px;
+}
+
+.myInfo img {
+    width: 50px;
+    height: 50px;
+}
+
+.myInfo h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin: auto 0;
+    padding-left: 20px;
+}
+
+.myInfo h3 a {
+    font-weight: 800;
+}
+
+.goMenu {
+    /* position: fixed; */
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 30px 3px #4461f22f;
+}
+
+.goMenu h3 {
+    display: block;
+    width: 100%;
+    font-weight: 800;
+    font-size: 20px;
+    margin-bottom: 30px;
+    position: relative;
+    padding: 10px;
+    padding-bottom: 20px;
+}
+
+.goMenu h3::before {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #4461f22f;
+}
+
+.goMenu ul li {
+    padding-left: 10px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+}
+
+.goMenu ul li a {
+    color: #999;
+}
+
+.goMenu ul li.active a {
+    font-weight: 700;
+    color: #333;
+}
+
+.goMenu ul li:last-child {
+    margin-bottom: 0;
+}
+
+.goMenu ul li:hover a {
+    font-weight: 700;
+}

@@ -1,0 +1,161 @@
+/* 아이디 찾기 */
+.changepw__popup {
+    background-color: rgba(0, 0, 0, .5);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 99999;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    display: none;
+}
+
+.changepw__popup.open {
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.changepw__inner {
+    width: 400px;
+    border-radius: 10px;
+    background-color: #F9FAFC;
+    /* padding: 50px 0; */
+    padding-top: 50px;
+    text-align: center;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.changepw__header h3 {
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+.changepw__contents {
+    position: relative;
+}
+
+.changepw__contents img {
+    width: 150px;
+    filter: drop-shadow(-13px 10px 16px rgba(0,0,0,0.25));
+    margin: 20px 0;
+}
+
+.changepw__contents p {
+    color: #555;
+    line-height: 1.4;
+    font-size: 0.95rem;
+    /* margin: 15px 0; */
+}
+
+.changepw__contents p em {
+    font-weight: 800;
+    font-size: 1.2rem;
+}
+
+.changepw__footer {
+    padding: 30px 50px 50px 50px;
+}
+
+.changepw__footer .ac {
+    text-align: center;
+    width: 100%;
+    padding: 1rem 0;
+    background-color: #4461F2;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    font-family: 'NanumSquare';
+    cursor: pointer;
+    /* margin: 0.5rem 0; */
+}
+
+.changepw__footer .ac a {
+    color: #fff;
+}
+
+.changepw__footer .btn {
+    width: 100%;
+    padding: 1rem 0;
+    background-color: #4461F2;
+    color: #fff;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    font-family: 'NanumSquare';
+    cursor: pointer;
+    margin: 0.5rem 0;
+}
+
+.btn_close {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    width: 20px;
+    height: 20px;
+    background-color: #F9FAFC;
+    background-image: url("data:image/svg+xml,%3csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cg clip-path='url(%23clip0_740_2170)'%3e%3cpath d='M0.382905 19.5129C-0.0171639 19.115 -0.0171641 18.4698 0.382905 18.0718L18.2512 0.298459C18.6512 -0.0994859 19.2999 -0.0994864 19.6999 0.298458C20.1 0.696403 20.1 1.3416 19.6999 1.73954L1.83168 19.5129C1.43161 19.9109 0.782974 19.9109 0.382905 19.5129Z' fill='%23666666'/%3e%3cpath d='M0.300051 0.491576C0.70012 0.093631 1.34876 0.0936308 1.74883 0.491575L19.6171 18.265C20.0172 18.6629 20.0172 19.3081 19.6171 19.706C19.217 20.104 18.5684 20.104 18.1683 19.706L0.300052 1.93266C-0.100017 1.53472 -0.100017 0.88952 0.300051 0.491576Z' fill='%23666666'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='clip0_740_2170'%3e%3crect width='20' height='20' fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e");
+    background-position: center center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.btn_close span {
+    display: block;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -9999px
+}
+
+.changepw__contents legend {
+    position:absolute;
+    clip:rect(0 0 0 0);
+    width:1px;
+    height:1px;
+    margin:-1px;
+    overflow:hidden;
+}
+
+.changepw__contents form {
+    padding: 30px 50px 50px 50px;
+}
+
+.changepw__contents form .btn {
+    padding: 1rem 8.3rem;
+    background-color: #4461F2;
+    color: #fff;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    font-family: 'NanumSquare';
+    cursor: pointer;
+}
+
+.input__style {
+    background-color: #EAF0F7;
+    font-size: 1rem;
+    padding: 1.2rem;
+    width: 100%;
+    border: 0;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.input__button {
+    border-radius: 5px;
+    width: 100%;
+    font-size: 1.3rem;
+    padding: 1rem;
+    background-color: #4461F2;
+    color: #fff;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+
+

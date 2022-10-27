@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>헤더영역</title>
+    
+    <link rel="stylesheet" href="assets/css/fonts.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/js/test/aos.css">
+    <link rel="stylesheet" href="assets/js/test/common.css">
+    <link rel="stylesheet" href="assets/js/test/fullpage.min.css">
+    <link rel="stylesheet" href="assets/js/test/style.css">
+    <link rel="stylesheet" href="assets/js/test/swiper.min.css">
+</head>
+<body>
+    <header id="headerType" class="header__wrap nanum">
+        <div class="header__inner">
+            <div class="header__logo">
+                <a href="main.html">
+                    <img src="../html/assets/img/header__icon.png" alt="사뿐소품 로고">
+                </a>
+            </div>
+            <nav class="header__menu clearfix">
+                <ul>
+                    <li><a href="#sliderType">사뿐소품이란?</a></li>
+                    <li><a href="#imageType">소품샵 리스트</a></li>
+                    <li><a href="board.html">커뮤니티</a></li>
+                    <li><a href="myCPage.html">마이페이지</a></li>
+                    <li><a href="faq.html">고객센터</a></li>
+                </ul>
+            </nav>
+            <div class="header__member clearfix">
+                <ul>
+                    <li><a href="login.html">로그인</a></li>
+                    <li><a href="join1.html">회원가입</a></li>
+                </ul>
+            </div>
+            <div class="header__search clearfix">
+                <form action="headerSearch.php" name="headerSearch" method="get">
+                    <fieldset>
+                        <legend>검색 영역</legend>
+                        <input type="search" name="searchKeyword" id="searchKeyword" placeholder="검색어를 입력하세요 !" aria-label="search" required>
+                        <button type="submit" class="searchBtn">
+                            <img src="assets/img/search_icon.svg" alt="검색버튼">
+                        </button>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="header__ham">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+    <!-- // headerType -->
+
+    <main >
+        <!-- <div class="inner-sub">
+            <h2 class="page-tit">사뿐소품</h2>
+            <ul class="prjt-list-filter">
+                <li class="active"><button type="button" data-filter="all">BEST</button></li>
+                <li><button type="button" data-filter="commerce">NEW</button></li>
+            </ul>
+        </div>
+        <div class="prjt-list-rail swiper">
+            <ul class="prjt-list swiper-wrapper">
+                <li class="mobile manage swiper-slide">
+                    <a href="/project_view.html?prjt=volvo">
+                        <div class="img-area">
+                            <img src="assets/img/thum_volvo.png" alt="" />
+                            <div>
+                                <p class="category">
+                                    <span>모바일</span>
+                                    <span>운영</span>
+                                </p>
+                                <p class="title">볼보트럭 코리아 APP<br />UI/UX 개선</p>
+                            </div>
+                        </div>
+                        <p class="period">2022.05 ~ 2022.06</p>
+                    </a>
+                </li>
+                <li class="mobile manage swiper-slide">
+                    <a href="/project_view.html?prjt=volvo">
+                        <div class="img-area">
+                            <img src="assets/img/thum_volvo.png" alt="" />
+                            <div>
+                                <p class="category">
+                                    <span>모바일</span>
+                                    <span>운영</span>
+                                </p>
+                                <p class="title">볼보트럭 코리아 APP<br />UI/UX 개선</p>
+                            </div>
+                        </div>
+                        <p class="period">2022.05 ~ 2022.06</p>
+                    </a>
+                </li>
+                <li class="mobile manage swiper-slide">
+                    <a href="/project_view.html?prjt=volvo">
+                        <div class="img-area">
+                            <img src="assets/img/thum_volvo.png" alt="" />
+                            <div>
+                                <p class="category">
+                                    <span>모바일</span>
+                                    <span>운영</span>
+                                </p>
+                                <p class="title">볼보트럭 코리아 APP<br />UI/UX 개선</p>
+                            </div>
+                        </div>
+                        <p class="period">2022.05 ~ 2022.06</p>
+                    </a>
+                </li>
+                <li class="mobile manage swiper-slide">
+                    <a href="/project_view.html?prjt=volvo">
+                        <div class="img-area">
+                            <img src="assets/img/thum_volvo.png" alt="" />
+                            <div>
+                                <p class="category">
+                                    <span>모바일</span>
+                                    <span>운영</span>
+                                </p>
+                                <p class="title">볼보트럭 코리아 APP<br />UI/UX 개선</p>
+                            </div>
+                        </div>
+                        <p class="period">2022.05 ~ 2022.06</p>
+                    </a>
+                </li>
+                <li class="mobile manage swiper-slide">
+                    <a href="/project_view.html?prjt=volvo">
+                        <div class="img-area">
+                            <img src="assets/img/thum_volvo.png" alt="" />
+                            <div>
+                                <p class="category">
+                                    <span>모바일</span>
+                                    <span>운영</span>
+                                </p>
+                                <p class="title">볼보트럭 코리아 APP<br />UI/UX 개선</p>
+                            </div>
+                        </div>
+                        <p class="period">2022.05 ~ 2022.06</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="prjt-scroll-wrap">
+            <div>
+                <div class="swiper-scrollbar"></div>
+            </div>
+        </div> -->
+
+        <div class="difference">
+            <p class="bg-txt">
+                다름과 함께 다르게 커뮤니케이션
+            </p>
+            <div class="inner-sub">
+                <dl class="stroke">
+                    <dt>남다른 경험</dt>
+                    <dd>
+                        다름과 함께 <em>소통</em>하며<br>
+                        가치 있는 브랜드를<br>
+                        <em>경험</em>해보세요
+                    </dd>
+                </dl>
+                <p>
+                    각 부문 전문가들의 오랜 노하우를 바탕으로 온라인 기반의 <br>시스템 통합 구축 사업에 최적화된 Total DX Service를 제공합니다.<br><br>
+                    고객과의 남다른 커뮤니케이션, 남다른 기술력을 바탕으로<br> 고객의 니즈에 맞는 컨설팅부터 서비스 구축 및 운영까지 공동의 목표를 달성합니다.<br> 우리는 브랜드의 가능성을 발견하고 그것을 현실화합니다. 
+                </p>
+            </div>
+        </div>
+    </main>
+    <!-- //main -->
+
+    <footer id="footer__type" class="footer__wrap nanum">
+        <div class="footer__inner container">
+            <div class="footer__menu">
+                <ul>
+                    <h4>고객센터</h4>
+                    <div class="footer__cs">
+                        <li class="footer__cscenter">sabbunsopum@gmail.com</li>
+                        <li><span>홈페이지 내 1:1 상담 또는 이메일을 통해 문의를 받고 있습니다.</span></li>
+                    </div>
+                </ul>
+                <ul>
+                    <h4>사뿐소품</h4>
+                    <li><a href="#">브랜드스토리</a></li>
+                    <li><a href="#">이용안내</a></li>
+                    <li><a href="#">연혁</a></li>
+                </ul>
+                <ul>
+                    <h4>고객지원</h4>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">자주하는 질문</a></li>
+                    <li><a href="#">1:1 상담</a></li>
+                </ul>
+                <ul>
+                    <h4>개인정보</h4>
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#">개인정보처리방침</a></li>
+                </ul>
+                <p>
+                    Copyright © 사뿐소품. All rights reserved.
+                </p>
+            </div>
+            <div class="footer__icon">
+                <div class="footer__icon__img img1"><a href=""></a></div>
+                <div class="footer__icon__img img2"><a href=""></a></div>
+                <div class="footer__icon__img img3"><a href=""></a></div>
+                <div class="footer__icon__img img4"><a href=""></a></div>
+                <div class="footer__icon__img img5"><a href=""></a></div>
+            </div>
+        </div>
+
+    </footer>
+    <!-- // footer -->
+</body>
+
+<script src="assets/js/test/aos.js"></script>
+<script src="assets/js/test/common.js"></script>
+<script src="assets/js/test/fullpage.min.js"></script>
+<script src="assets/js/test/jquery-3.4.1.min.js"></script>
+<script src="assets/js/test/scrolloverflow.min.js"></script>
+<script src="assets/js/test/swiper.min.js"></script>
+<script src="assets/js/test/TweenMax.min.js"></script>
+<!-- <script>
+    $(document).ready(function () {
+        prjtWidth();
+        var prjtSlide = new Swiper(".prjt-list-rail", {
+            slidesPerView: "auto",
+            spaceBetween: 30,
+            freeMode: true,
+            mousewheel: true,
+            scrollbar: {
+                el: ".prjt-scroll-wrap .swiper-scrollbar",
+                hide: false,
+            },
+        });
+        $(".prjt-list-filter > li > button").on("click", function () {
+            $(".prjt-list-filter > li").removeClass("on");
+            $(this).parents("li").addClass("on");
+            var filter = $(this).attr("data-filter");
+            if (filter == "all") {
+                $(".prjt-list > li").css("display", "");
+                prjtSlide.update();
+                prjtSlide.scrollbar.updateSize();
+                prjtSlide.slideTo(0);
+            } else {
+                $(".prjt-list > li").css("display", "none");
+                $(".prjt-list > li." + filter).css("display", "");
+                prjtSlide.update();
+                prjtSlide.scrollbar.updateSize();
+                prjtSlide.slideTo(0);
+            }
+        });
+        $(".prjt-list").hover(
+            function () {
+                $(".cursor").addClass("drag");
+            },
+            function () {
+                $(".cursor").removeClass("drag");
+            }
+        );
+    });
+    $(window).resize(function () {
+        prjtWidth();
+        if ($(window).outerWidth() < 1200) {
+            $(".prjt-scroll-wrap").css("padding-left", "0");
+        }
+    });
+    function prjtWidth() {
+        var minusWidth = 0;
+        if ($(".wrap").outerHeight() > $(window).innerHeight()) {
+            minusWidth = ($(window).outerWidth() - 1200) / 2 - 8;
+        } else {
+            minusWidth = ($(window).outerWidth() - 1200) / 2;
+        }
+
+        $(".prjt-scroll-wrap").css("padding-left", minusWidth + "px");
+    }
+</script> -->
+<script>
+    $(window).scroll(function(){
+        var scroll = $(this).scrollTop(),
+            scrollVal = scroll / 1.3,
+            scrollTxt = $('.bg-txt');
+        
+        TweenMax.to(scrollTxt, .5, {x:-scrollVal})
+    });
+</script>
+</html>

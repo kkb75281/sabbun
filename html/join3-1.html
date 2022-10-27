@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입 페이지_3_1</title>
+
+    <link rel="stylesheet" href="assets/css/fonts.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/join.css">
+</head>
+<body>
+    <header id="header" class="header">
+        <div class="logo">
+            <img src="assets/img/temp_logo.svg" alt="사뿐소품 로고">
+        </div>
+    </header>
+    <main id="main">
+        <section id="join" class="container nanum">
+            <div class="join__step active3">
+                <em>3</em>/4
+            </div>
+            <div class="join__desc">
+                <h1>
+                    <span>사장님 회원의 정보</span>를 알려주세요!   
+                </h1>
+                <p>입력한 정보는 회원가입 외 다른 용도로 사용하지 않습니다!</p>
+            </div>
+            <div class="join__inner">
+                <form action="joinSave.php" name="join" method="post">
+                    <fieldset>
+                        <legend>회원가입</legend>
+                        <div class="join__box">
+                            <div class="youInfo">
+                                <div>
+                                    <label for="youName">이름</label>
+                                    <input type="text" id="youName" name="youName" maxlength="5" placeholder="이름을 적어주세요!" required>
+                                </div>
+                                <div class="overlap">
+                                    <label for="youNickName">닉네임</label>
+                                    <input type="text" id="youNickName" name="youNickName" placeholder="닉네임을 적어주세요!" required>
+                                    <a class="check" href="#c" onclick="nickChecking()">중복검사</a>
+                                    <p class="msg" id="youNickNameComment"><!-- * 닉네임이 존재합니다. --></p>
+                                </div>
+                                <div class="overlap">
+                                    <label for="youEmail">이메일</label>
+                                    <input type="email" id="youEmail" name="youEmail" placeholder="이메일을 적어주세요!" required>
+                                    <a class="check" href="#c" onclick="emailChecking()">중복검사</a>
+                                    <p class="msg" id="youEmailComment"><!-- * 이메일이 존재합니다. --></p>
+                                </div>
+                                <div>
+                                    <label for="youPass">비밀번호</label>
+                                    <input type="password" id="youPass" name="youPass" maxlength="20" placeholder="비밀번호를 적어주세요!" required>
+                                </div>
+                                <div>
+                                    <label for="youPassC">비밀번호 확인</label>
+                                    <input type="password" id="youPassC" name="youPassC" maxlength="20" placeholder="비밀번호를 한번 더 적어주세요!" required>
+                                </div>
+                                <div>
+                                    <label for="youPhone">휴대폰 번호</label>
+                                    <input type="text" id="youPhone" name="youPhone" maxlength="15" placeholder="휴대폰 번호(010-0000-0000)를 적어주세요!" required>
+                                </div>
+                            </div>
+                            <div class="storeInfo">
+                                <div>
+                                    <label for="youShop">가게(상호)명</label>
+                                    <input type="text" id="youShop" name="youShop" placeholder="가게(상호)명을 적어주세요!" required>
+                                </div>
+                                <div>
+                                    <label for="youAdress">가게 주소</label>
+                                    <input type="text" id="youAdress" name="youAdress" placeholder="가게 주소(xx시 xx구 xx동 xxx)를 적어주세요!" required>
+                                </div>
+                                <div>
+                                    <label for="youShopNum">가게 전화번호</label>
+                                    <input type="text" id="youShopNum" name="youShopNum" placeholder="가게 전화번호(000-0000-0000)를 적어주세요!" required>
+                                </div>
+                            </div>
+                            <div class="moreover">
+                                <div>
+                                    <label for="youPhoto">프로필 이미지</label>
+                                    <input type="text" id="youPhoto" name="youPhoto" placeholder="이미지를 첨부해주세요!" required>
+                                </div>
+                                <div class="youGd">
+                                    <label for="youGender">성별</label>
+                                    <div class="btn">
+                                        <img src="../html/assets/img/boy-dynamic-color@3x.png" alt="남성">
+                                        <span>남성</span>
+                                    </div>
+                                    <div class="btn">
+                                        <img src="../html/assets/img/girl-dynamic-color@3x.png" alt="여성">
+                                        <span>여성</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="join__Nbtn" type="submit">다음으로</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        
+    </script>
+</body>
+</html>

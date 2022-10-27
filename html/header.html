@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>헤더영역</title>
+    
+    <link rel="stylesheet" href="assets/css/fonts.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+</head>
+<body>
+    <header id="headerType" class="header__wrap nanum">
+        <div class="header__inner">
+            <div class="header__logo">
+                <a href="main.html">
+                    <img src="../html/assets/img/header__icon.png" alt="사뿐소품 로고">
+                </a>
+            </div>
+            <nav class="header__menu clearfix">
+                <ul>
+                    <li><a href="#sliderType">사뿐소품이란?</a></li>
+                    <li><a href="#imageType">소품샵 리스트</a></li>
+                    <li><a href="board.html">커뮤니티</a></li>
+                    <li><a href="myPage.html">마이페이지</a></li>
+                    <li><a href="faq.html">고객센터</a></li>
+                </ul>
+            </nav>
+            <div class="header__member clearfix">
+                <ul>
+                    <li><a href="login.html">로그인</a></li>
+                    <li><a href="join1.html">회원가입</a></li>
+                </ul>
+            </div>
+            <div class="header__search clearfix">
+                <form action="headerSearch.php" name="headerSearch" method="get">
+                    <fieldset>
+                        <legend>검색 영역</legend>
+                        <input type="search" name="searchKeyword" id="searchKeyword" placeholder="검색어를 입력하세요 !" aria-label="search" required>
+                        <button type="submit" class="searchBtn">
+                            <img src="assets/img/search_icon.svg" alt="검색버튼">
+                        </button>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="header__ham">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+    <!-- // headerType -->
+</body>
+</html>

@@ -1,0 +1,22 @@
+/* text1 */
+.text__wrap{}
+
+.text__inner{
+    margin-bottom: 100px;
+}
+.text__inner .text__article{
+    padding: 30px;
+    text-align: center;
+    border-bottom: 1px solid #DDDDDD;
+}
+.text__inner .text__article .text__desc{}
+.text__inner .text__article .text__desc h3 {
+    font-size: 24px;
+    font-weight: 700;
+}
+.text__inner .text__article .text__desc span{
+    display: inline-block;
+    padding: 10px 0;
+    box-sizing: border-box;
+}
+

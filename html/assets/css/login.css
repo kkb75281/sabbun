@@ -1,0 +1,196 @@
+#login {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 170px 80px 110px 80px;
+}
+
+.login__left {
+    width: 68%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.login__desc h3 {
+    width: 400px;
+    word-break: keep-all;
+    font-size: 2.5rem;
+    font-weight: 800;
+    text-shadow: -0.5px 0 #000, 0 0.5px #000, 0.5px 0 #000, 0 -0.5px #000;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+    padding: 60px 0;
+}
+
+.login__desc p {
+    line-height: 1.4;
+    font-size: 1.1rem;
+    margin: 23px 0;
+}
+
+.login__desc a {
+    font-size: 1.1rem;
+    font-weight: 800;
+}
+
+.login__left .imgs {
+    position: absolute;
+    left: 40%;
+    transform: translate(-50%);
+    top: 50px;
+    z-index: -1;
+}
+
+.login__left .imgs .i1 {
+    width: 550px;
+    height: 550px;
+    background: url(../img/login_circle.svg);
+    background-repeat: no-repeat;
+}
+
+.login__left .imgs .i2 {
+    width: 270px;
+    position: absolute;
+    right: 3.5rem;
+    bottom: -1rem;
+}
+.login__left .imgs .i3 {
+    width: 100px;
+    position: absolute;
+    right: 15rem;
+    bottom: 9rem;
+}
+.login__left .imgs .i4 {
+    width: 140px;
+    position: absolute;
+    right: 2rem;
+    bottom: 16rem;
+}
+.login__left .imgs .i5 {
+    width: 180px;
+    position: absolute;
+    right: 13rem;
+    top: 5rem;
+}
+
+.login__inner {
+    width: 32%;
+    position: relative;
+}
+
+.login__contents {
+    position: relative;
+}
+
+.login__contents legend,
+.login__contents label {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
+
+.input__style {
+    background-color: #EAF0F7;
+    font-size: 1rem;
+    padding: 1.2rem;
+    width: 100%;
+    border: 0;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.input__button {
+    border-radius: 5px;
+    width: 100%;
+    font-size: 1.3rem;
+    padding: 1rem;
+    background-color: #4461F2;
+    color: #fff;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.sub__input {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.input__button2 {
+    width: 47%;
+    border-radius: 5px;
+    padding: 0.4rem;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.input__button2 img {
+    align-items: center;
+}
+
+.kakaoBtn {
+    width: 40px;
+    height: 40px;
+}
+
+.googleBtn {
+    width: 35px;
+    height: 35px;
+}
+
+.login__footer {
+    padding: 30px 0 0;
+}
+
+.login__footer .btn {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    height: inherit;
+}
+
+.login__footer .btn a {
+    width: 32%;
+    display: inline-block;
+    text-align: center;
+    box-sizing: border-box;
+    color: #666;
+    position: relative;
+}
+.login__footer .btn a::before {
+    position: absolute;
+    content: '';
+    top: 0.4rem;
+    right: 0;
+    width: 1px;
+    height: 60%;
+    background-color: #666;
+}
+.login__footer .btn a:last-child::before {
+    width: 0;
+}
+
+@media (max-width: 1280px) {
+    .login__footer .btn {
+        justify-content: center;
+    }
+    .login__footer .btn .btnJoin {
+        display: none;
+    }
+}
+@media (max-width: 980px) {
+    .login__left {
+        width: 100%;
+    }
+    .login__inner {
+        width: 100%;
+    }
+}
