@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>헤더영역</title>
-    
+
     <link rel="stylesheet" href="assets/css/fonts.css">
     <link rel="stylesheet" href="assets/css/common.css">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/header2.css">
 </head>
+
 <body>
     <header id="headerType" class="header__wrap nanum">
         <div class="header__inner">
@@ -19,7 +21,7 @@
                     <img src="../html/assets/img/header__icon1-1.png" alt="사뿐소품 로고">
                 </a>
             </div>
-            
+
             <nav class="header__menu clearfix">
                 <ul>
                     <li><a href="#sliderType">사뿐소품이란?</a></li>
@@ -39,7 +41,8 @@
                 <form action="headerSearch.php" name="headerSearch" method="get">
                     <fieldset>
                         <legend>검색 영역</legend>
-                        <input type="search" name="searchKeyword" id="searchKeyword" placeholder="검색어를 입력하세요 !" aria-label="search" required>
+                        <input type="search" name="searchKeyword" id="searchKeyword" placeholder="검색어를 입력하세요 !"
+                            aria-label="search" required>
                         <button type="submit" class="searchBtn">
                             <img src="assets/img/search_icon2.svg" alt="검색버튼">
                         </button>
@@ -51,8 +54,25 @@
                 <span></span>
                 <span></span>
             </div>
+            <div class="faq__header">
+                <h2>FAQ</h2>
+                <span>FAQ</span>
+                <div class="link">
+                    <ul>
+                        <li class="faq active"><a href="faq.php">자주묻는질문</a></li>
+                        <li class="qna"><a href="qna.php">1:1문의</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </header>
     <!-- // headerType -->
 </body>
+<script>
+    document.querySelector(".faq__header .link .qna").addEventListener("click", () => {
+        document.querySelector(".faq__header .link .faq").classList.remove("active");
+        document.querySelector(".faq__header .link .qna").classList.add("active");
+    });
+</script>
+
 </html>

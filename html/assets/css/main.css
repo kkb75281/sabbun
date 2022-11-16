@@ -261,13 +261,16 @@
 .tipBox span {
 	display: inline-block;
 	box-sizing: border-box;
-	font-size: 80px;
 	padding: 30px;
+}
+.tipBox img {
+	width: 7vw;
+  	height: 7vw;
 }
 .tipBox p {
 	display: inline-block;
 	/* border: 1px solid #4461f29f; */
-	line-height: 1.4;
+	line-height: 1.4; 
 	box-sizing: border-box;
 	padding: 24px 30px;
 	border-radius: 20px;
@@ -279,6 +282,7 @@
 .tipBox p:hover {
 	box-shadow: 5px 5px 30px 3px #4461f22f;
 }
+
 
 /* goto */
 #goto {

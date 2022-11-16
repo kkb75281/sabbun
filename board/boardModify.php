@@ -2,6 +2,11 @@
     include "../connect/connect.php";
     include "../connect/session.php";
     include "../connect/sessionCheck.php";
+
+
+    
+    $myMemberID = $_SESSION['myMemberID'];
+    
 ?>
 
 <!DOCTYPE html>
@@ -40,13 +45,18 @@
                         <form action="boardModifySave.php" name="boardModify" method="post">
                             <fieldset>
                                 <legend>게시판 작성 영역</legend>
-<?php
+                                <?php
     $myBoardID = $_GET['myBoardID'];
-    $sql = "SELECT myBoardID, boardTitle, boardContents FROM myBoard WHERE myBoardID = {$myBoardID}";
+    $sql = "SELECT myBoardID, boardTitle, boardContents, myMemberID FROM myBoard WHERE myBoardID = {$myBoardID}";
     $result = $connect -> query($sql);
+    $info = $result->fetch_array(MYSQLI_ASSOC);
+    
+    if($myMemberID !== $info['myMemberID']){
+        echo "<script>alert('내가 작성한 글이 아닙니다.'); history.back(1)</script>";
+        exit;
+    }
 
     if($result){
-        $info = $result->fetch_array(MYSQLI_ASSOC);
         echo "<div style='display:none'><label class='ir' for='myBoardID'>번호</label><input type='text' name='myBoardID' id='myBoardID' value='".$info['myBoardID']."'></div>";
         echo "<div><label class='ir' for='boardTitle'>제목</label><input type='text' name='boardTitle' id='boardTitle' value='".$info['boardTitle']."'></div>";
     }
@@ -81,7 +91,7 @@
                                     <button class="i">i</button>
                                 </div>
                                 <div class="board__writteLine"></div>
-<?php
+                                <?php
     $result = $connect -> query($sql);
 
     if($result){
@@ -96,7 +106,7 @@
                                     </textarea>
                                 </div> -->
                                 <div class="board__writteLine"></div>
-                                <div class="filebox bs3-primary">
+                                <!-- <div class="filebox bs3-primary">
                                     <span>첨부파일1</span>
                                     <input class="upload-name" value="파일선택" disabled="disabled">
 
@@ -109,8 +119,8 @@
 
                                     <label for="ex_filename">업로드</label>
                                     <input type="file" id="ex_filename" class="upload-hidden">
-                                </div>
-<?php
+                                </div> -->
+                                <?php
     $result = $connect -> query($sql);
 
     if($result){

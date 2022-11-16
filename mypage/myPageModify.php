@@ -50,26 +50,43 @@
                 $blogImgName = "Img_".time().rand(1,99999)."."."{$fileExtension}";
                 //echo "이미지 파일이 맞네요!";
                 $sql = "UPDATE myBMember SET blogImgFile = '{$blogImgName}', blogImgSize = '{$blogImgSize}' WHERE myMemberID = '{$myMemberID}'";
-                $result2 = $connect -> query($sql);
-                $result2 = move_uploaded_file($blogImgTmp, $blogImgDir.$blogImgName);
-
+                
             } else {
-                echo "<script>alert('지원하는 이미지 파일이 아닙니다.'); history.back(1)</script>";
+                echo '<script type="text/javascript">'; 
+                echo 'alert("지원하는 이미지 파일 형식이 아닙니다.");'; 
+                //echo 'window.location.href = "../login/login.php";';
+                echo 'history.back(1)';
+                echo '</script>';    
                 exit;
             }
         }
     }else {
-        echo "<p>프로필 사진을 첨부하지 않았습니다. <br> 마이 페이지에서 추가 해주세요!</p>";
-        
+        echo '<script type="text/javascript">'; 
+        echo 'alert("프로필 사진을 첨부하지 않았습니다.");'; 
+        //echo 'window.location.href = "../login/login.php";';
+        echo 'history.back(1)';
+        echo '</script>';    
+        exit;
+      
     }
 
     //이미지 사이즈 확인
     if($blogImgSize > 1000000){
-        echo "<script>alert('이미지 용량이 1메가를 초과했습니다.'); history.back(1)</script>";
+        echo '<script type="text/javascript">'; 
+        echo 'alert("프로필 이미지 용량이 1메가를 초과했습니다.");'; 
+        //echo 'window.location.href = "../login/login.php";';
+        echo 'history.back(1)';
+        echo '</script>';    
         exit;
     }else{
-        "<script>alert('회원 정보가 수정됐습니다.');</script>";
-        Header("Location: ../main/main.php");
+        $result2 = $connect -> query($sql);
+        $result2 = move_uploaded_file($blogImgTmp, $blogImgDir.$blogImgName);
+        echo '<script type="text/javascript">'; 
+        echo 'alert("회원 정보가 수정됐습니다.");'; 
+        //echo 'window.location.href = "../login/login.php";';
+        echo 'history.back(1)';
+        echo '</script>';    
+        
     }
 
    

@@ -1,6 +1,7 @@
 <?php
     include "../connect/connect.php";
-    include "../connect/session.php"; 
+    include "../connect/session.php";
+
     
     $myBoardID = $_GET['myBoardID'];
 
@@ -33,9 +34,9 @@
 <style>
 .blog__contents__comment h3 {
     display: inline-block;
-    background: #000;
-    color: #fff;
-    margin-bottom: 50px;
+    color: #000;
+    font-weight: 700;
+    margin-top: 10px;
     padding: 1px 10px
 }
 
@@ -95,7 +96,6 @@
 
 .comment__write {
     padding: 20px;
-    background: #e5e5e5;
 }
 
 .comment__write label {
@@ -110,12 +110,13 @@
 .comment__write input {
     border: 0;
     padding: 15px 20px;
-    border-radius: 50px
+    border-radius: 50px;
+    background-color: #f5f5f5;
 }
 
 .comment__write button {
     border: 0;
-    background: #000;
+    background: #4461f2;
     color: #fff;
     border-radius: 30px;
     cursor: pointer
@@ -156,10 +157,10 @@
         <section id="board" class="board__wrap container">
             <h2>게시판 보기 영역입니다.</h2>
             <div class="board__inner">
-                <div class="board__title">
+                <!-- <div class="board__title">
                     <h3>Free Board</h3>
                     <p>자유 게시판 게시글 보기입니다.</p>
-                </div>
+                </div> -->
                 <div class="board__view">
                     <!-- <h3>[공지] 2021년 겨울 공지사항입니다.</h3> -->
                     <div class="board__view__head">
@@ -180,14 +181,18 @@
                         <?php
     
 
-    $sql = "SELECT boardContents, boardLike FROM myBoard WHERE myBoardID = {$myBoardID}";
+    $sql = "SELECT * FROM myBoard WHERE myBoardID = {$myBoardID}";
     $bresult = $connect -> query($sql);
 
     if($bresult){
         $binfo = $bresult -> fetch_array(MYSQLI_ASSOC);
 
         echo "<p>".$binfo['boardContents']."</p>";
-        echo "<span class='likes'><a href='#'><img src='../html/assets/img/boardView_disLike@3x.png' alt=''></a>".$binfo['boardLike']."</span>";
+        if ($binfo['boardImgFile'] !== "Img_default.jpg"){
+            echo "<p><img src='img/".$binfo['boardImgFile']."'></p>";
+        }
+        // echo "<span class='likes'><a href='#'><img src='../html/assets/img/boardView_disLike@3x.png' alt=''></a>".$binfo['boardLike']."</span>";
+
     }
 ?>
 

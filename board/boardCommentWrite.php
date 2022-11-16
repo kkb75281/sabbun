@@ -1,5 +1,6 @@
 <?php
     include "../connect/connect.php";
+    include "../connect/session.php";
 
     $myBoardID = $_POST['boardID'];
     $commentName = $_POST['name'];

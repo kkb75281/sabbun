@@ -1,5 +1,10 @@
+<?php
+    include "../connect/connect.php";
+    include "../connect/session.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,7 +18,10 @@
     <link rel="stylesheet" href="../html/assets/css/login.css">
     <link rel="stylesheet" href="../html/assets/css/find.css">
     <link rel="stylesheet" href="../html/assets/css/footer.css">
+
+
 </head>
+
 <body>
     <?php include "../include/header.php" ?>
     <!-- // header -->
@@ -49,21 +57,23 @@
                             <legend>로그인 입력폼</legend>
                             <div>
                                 <label for="youEmail">이메일</label>
-                                <input type="email" name="youEmail" id="youEmail" placeholder="이메일" class="input__style" required>
+                                <input type="email" name="youEmail" id="youEmail" placeholder="이메일" class="input__style"
+                                    required>
                             </div>
                             <div>
                                 <label for="youPass">비밀번호</label>
-                                <input type="password" name="youPass" id="youPass" placeholder="비밀번호" class="input__style" required>
+                                <input type="password" name="youPass" id="youPass" placeholder="비밀번호"
+                                    class="input__style" required>
                             </div>
                             <button type="submit" class="input__button">로그인</button>
-                            <div class="sub__input">
+                            <!-- <div class="sub__input">
                                 <button type="submit" class="input__button2">
                                     <img class="kakaoBtn" src="../html/assets/img/kakao.svg" alt="카카오톡 로그인">
                                 </button>
                                 <button type="submit" class="input__button2">
                                     <img class="googleBtn" src="../html/assets/img/google.svg" alt="구글 로그인">
                                 </button>
-                            </div>
+                            </div> -->
                         </fieldset>
                     </form>
                 </div>
@@ -180,7 +190,8 @@
                         <legend>아이디 찾기 입력폼</legend>
                         <div>
                             <label for="youPhone" class="ir">휴대폰 번호</label>
-                            <input type="text" name="youPhone" id="youPhone" placeholder="휴대폰 번호를 입력해주세요!" class="input__style" required>
+                            <input type="text" name="youPhone" id="youPhone" placeholder="휴대폰 번호를 입력해주세요!"
+                                class="input__style" required>
                         </div>
                         <button type="submit" class="btn input_phone">입력</button>
                     </fieldset>
@@ -272,7 +283,8 @@
                         <legend>비밀번호 찾기 입력폼</legend>
                         <div>
                             <label for="youEmail" class="ir">이메일 주소</label>
-                            <input type="text" name="youEmail" id="youEmail" placeholder="이메일 주소를 입력해주세요!" class="input__style" required>
+                            <input type="text" name="youEmail" id="youEmail" placeholder="이메일 주소를 입력해주세요!"
+                                class="input__style" required>
                         </div>
                         <button type="submit" class="btn input_email">입력</button>
                     </fieldset>
@@ -299,7 +311,8 @@
                         <legend>비밀번호 찾기 입력폼</legend>
                         <div>
                             <label for="youPhone" class="ir">이메일 주소</label>
-                            <input type="text" name="youPhone" id="youPhone" placeholder="휴대폰 번호를 입력해주세요!" class="input__style" required>
+                            <input type="text" name="youPhone" id="youPhone" placeholder="휴대폰 번호를 입력해주세요!"
+                                class="input__style" required>
                         </div>
                         <button type="submit" class="btn input_phonePw">입력</button>
                     </fieldset>
@@ -354,109 +367,108 @@
     </div>
 </body>
 <script>
-    const findidBtn = document.querySelector(".login__footer .btn .findId");
-    const findidPopup = document.querySelector(".findid__popup");
-    const findidClose1 = document.querySelector(".findid__inner .cb1");
-    const findidPhone = document.querySelector(".findid__phone");
-    const idPhoneBtn = document.querySelector(".btn_phone");
-    const inputPhone = document.querySelector(".input_phone");
-    const findidClose2 = document.querySelector(".findid__inner .cb2");
-    const findidSuccess = document.querySelector(".findid__success");
-    const findPw = document.querySelector(".btn_pw");
-    const findidClose3 = document.querySelector(".findid__inner .cb3");
-    const findidError = document.querySelector(".findid__error");
-    const findidClose4 = document.querySelector(".findid__inner .cb4");
+const findidBtn = document.querySelector(".login__footer .btn .findId");
+const findidPopup = document.querySelector(".findid__popup");
+const findidClose1 = document.querySelector(".findid__inner .cb1");
+const findidPhone = document.querySelector(".findid__phone");
+const idPhoneBtn = document.querySelector(".btn_phone");
+const inputPhone = document.querySelector(".input_phone");
+const findidClose2 = document.querySelector(".findid__inner .cb2");
+const findidSuccess = document.querySelector(".findid__success");
+const findPw = document.querySelector(".btn_pw");
+const findidClose3 = document.querySelector(".findid__inner .cb3");
+const findidError = document.querySelector(".findid__error");
+const findidClose4 = document.querySelector(".findid__inner .cb4");
 
-    const findpwBtn = document.querySelector(".login__footer .btn .findPw");
-    const findpwPopup = document.querySelector(".findpw__popup");
-    const findpwClose1 = document.querySelector(".findpw__inner .cb5");
-    const findpwEmail = document.querySelector(".findpw__email");
-    const findpwPhone = document.querySelector(".findpw__phone");
-    const pwEmailBtn = document.querySelector(".btn_email");
-    const pwPhoneBtn = document.querySelector(".btn_phonePw");
-    const inputEmail = document.querySelector(".input_email");
-    const inputPhonePw = document.querySelector(".input_phonePw");
-    const findpwClose2 = document.querySelector(".findpw__inner .cb6");
-    const findpwClose3 = document.querySelector(".findpw__inner .cb7");
-    const findpwClose4 = document.querySelector(".findpw__inner .cb8");
-    const findpwClose5 = document.querySelector(".findpw__inner .cb9");
-    const findpwError = document.querySelector(".findpw__error");
-    const findpwAgain = document.querySelector(".btn_againPw");
-    const findpwSuccess = document.querySelector(".findpw__success");
-    const findId = document.querySelector(".btn_id");
-
-
+const findpwBtn = document.querySelector(".login__footer .btn .findPw");
+const findpwPopup = document.querySelector(".findpw__popup");
+const findpwClose1 = document.querySelector(".findpw__inner .cb5");
+const findpwEmail = document.querySelector(".findpw__email");
+const findpwPhone = document.querySelector(".findpw__phone");
+const pwEmailBtn = document.querySelector(".btn_email");
+const pwPhoneBtn = document.querySelector(".btn_phonePw");
+const inputEmail = document.querySelector(".input_email");
+const inputPhonePw = document.querySelector(".input_phonePw");
+const findpwClose2 = document.querySelector(".findpw__inner .cb6");
+const findpwClose3 = document.querySelector(".findpw__inner .cb7");
+const findpwClose4 = document.querySelector(".findpw__inner .cb8");
+const findpwClose5 = document.querySelector(".findpw__inner .cb9");
+const findpwError = document.querySelector(".findpw__error");
+const findpwAgain = document.querySelector(".btn_againPw");
+const findpwSuccess = document.querySelector(".findpw__success");
+const findId = document.querySelector(".btn_id");
 
 
 
-    // findidBtn.addEventListener("click", ()=>{
-    //     findidPopup.classList.add("open");
-    // });
-    // findidClose1.addEventListener("click", ()=>{
-    //     findidPopup.classList.remove("open");
-    // });
-    // idPhoneBtn.addEventListener("click", ()=>{
-    //     findidPopup.classList.remove("open");
-    //     findidPhone.classList.add("open");
-    // });
-    // findidClose2.addEventListener("click", ()=>{
-    //     findidPhone.classList.remove("open");
-    // });
-    // inputPhone.addEventListener("click", ()=>{
-    //     findidPhone.classList.remove("open");
-    //     findidSuccess.classList.add("open");
-    // });
-    // findPw.addEventListener("click", ()=>{
-    //     findidSuccess.classList.remove("open");
-    //     findpwPopup.classList.add("open");
-    // });
-    // findidClose3.addEventListener("click", ()=>{
-    //     findidSuccess.classList.remove("open");
-    // });
-
-    // findpwBtn.addEventListener("click", ()=>{
-    //     findpwPopup.classList.add("open");
-    // });
-    // findpwClose1.addEventListener("click", ()=>{
-    //     findpwPopup.classList.remove("open");
-    // });
-    // pwEmailBtn.addEventListener("click", ()=>{
-    //     findpwPopup.classList.remove("open");
-    //     findpwEmail.classList.add("open");
-    // });
-    // findpwClose2.addEventListener("click", ()=>{
-    //     findpwEmail.classList.remove("open");
-    // });
-    // inputEmail.addEventListener("click", ()=>{
-    //     findpwEmail.classList.remove("open");
-    //     findpwError.classList.add("open");
-    // });
-    // pwPhoneBtn.addEventListener("click", ()=>{
-    //     findpwPopup.classList.remove("open");
-    //     findpwPhone.classList.add("open");
-    // });
-    // findpwAgain.addEventListener("click", ()=>{
-    //     findpwError.classList.remove("open");
-    //     findpwPopup.classList.add("open");
-    // });
-    // findpwClose3.addEventListener("click", ()=>{
-    //     findpwPhone.classList.remove("open");
-    // });
-    // findpwClose4.addEventListener("click", ()=>{
-    //     findpwError.classList.remove("open");
-    // });
-    // inputPhonePw.addEventListener("click", ()=>{
-    //     findpwPhone.classList.remove("open");
-    //     findpwSuccess.classList.add("open");
-    // });
-    // findId.addEventListener("click", ()=>{
-    //     findpwSuccess.classList.remove("open");
-    //     findidPopup.classList.add("open");
-    // });
-    // findpwClose5.addEventListener("click", ()=>{
-    //     findpwSuccess.classList.remove("open");
-    // });
 
 
+// findidBtn.addEventListener("click", ()=>{
+//     findidPopup.classList.add("open");
+// });
+// findidClose1.addEventListener("click", ()=>{
+//     findidPopup.classList.remove("open");
+// });
+// idPhoneBtn.addEventListener("click", ()=>{
+//     findidPopup.classList.remove("open");
+//     findidPhone.classList.add("open");
+// });
+// findidClose2.addEventListener("click", ()=>{
+//     findidPhone.classList.remove("open");
+// });
+// inputPhone.addEventListener("click", ()=>{
+//     findidPhone.classList.remove("open");
+//     findidSuccess.classList.add("open");
+// });
+// findPw.addEventListener("click", ()=>{
+//     findidSuccess.classList.remove("open");
+//     findpwPopup.classList.add("open");
+// });
+// findidClose3.addEventListener("click", ()=>{
+//     findidSuccess.classList.remove("open");
+// });
+
+// findpwBtn.addEventListener("click", ()=>{
+//     findpwPopup.classList.add("open");
+// });
+// findpwClose1.addEventListener("click", ()=>{
+//     findpwPopup.classList.remove("open");
+// });
+// pwEmailBtn.addEventListener("click", ()=>{
+//     findpwPopup.classList.remove("open");
+//     findpwEmail.classList.add("open");
+// });
+// findpwClose2.addEventListener("click", ()=>{
+//     findpwEmail.classList.remove("open");
+// });
+// inputEmail.addEventListener("click", ()=>{
+//     findpwEmail.classList.remove("open");
+//     findpwError.classList.add("open");
+// });
+// pwPhoneBtn.addEventListener("click", ()=>{
+//     findpwPopup.classList.remove("open");
+//     findpwPhone.classList.add("open");
+// });
+// findpwAgain.addEventListener("click", ()=>{
+//     findpwError.classList.remove("open");
+//     findpwPopup.classList.add("open");
+// });
+// findpwClose3.addEventListener("click", ()=>{
+//     findpwPhone.classList.remove("open");
+// });
+// findpwClose4.addEventListener("click", ()=>{
+//     findpwError.classList.remove("open");
+// });
+// inputPhonePw.addEventListener("click", ()=>{
+//     findpwPhone.classList.remove("open");
+//     findpwSuccess.classList.add("open");
+// });
+// findId.addEventListener("click", ()=>{
+//     findpwSuccess.classList.remove("open");
+//     findidPopup.classList.add("open");
+// });
+// findpwClose5.addEventListener("click", ()=>{
+//     findpwSuccess.classList.remove("open");
+// });
 </script>
+
 </html>

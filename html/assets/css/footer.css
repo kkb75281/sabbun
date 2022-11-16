@@ -6,7 +6,7 @@
 .footer__inner {
     width: 100%;
     display: flex;
-    padding: 5rem 1rem;
+    padding: 5rem 1rem !important;
     overflow: hidden;
     position: relative;
 }

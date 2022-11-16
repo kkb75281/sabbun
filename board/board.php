@@ -1,7 +1,6 @@
 <?php
     include "../connect/connect.php";
     include "../connect/session.php";
-    include "../connect/sessionCheck.php";
 ?>
 
 <!DOCTYPE html>
@@ -57,7 +56,7 @@
                             </tr>
                         </thead>
                         <tbody>
-<?php
+                            <?php
 
 if(isset($_GET['page'])){
     $page = (int)$_GET['page'];
@@ -123,7 +122,7 @@ $viewLimit = ($viewNum * $page) - $viewNum;
                 </div>
                 <div class="board__pages">
                     <ul>
-<?php
+                        <?php
     $sql = "SELECT count(myBoardID) FROM myBoard";
     $result = $connect -> query($sql);
 
@@ -179,7 +178,7 @@ $viewLimit = ($viewNum * $page) - $viewNum;
                     </ul>
                 </div>
 
-                
+
             </div>
         </section>
         <!-- //board -->
@@ -192,4 +191,5 @@ $viewLimit = ($viewNum * $page) - $viewNum;
     <!-- // footer -->
 
 </body>
+
 </html>

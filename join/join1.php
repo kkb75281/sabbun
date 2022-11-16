@@ -1,5 +1,10 @@
+<?php
+    include "../connect/connect.php";
+    include "../connect/session.php";
+?>
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,6 +16,7 @@
     <link rel="stylesheet" href="../html/assets/css/common.css">
     <link rel="stylesheet" href="../html/assets/css/join.css">
 </head>
+
 <body>
     <header id="header" class="header">
         <div class="logo">
@@ -25,7 +31,7 @@
             <div class="join__desc">
                 <h1>
                     <span>환영합니다.</span><br>
-                    사뿐소품 입니다!  
+                    사뿐소품 입니다!
                 </h1>
                 <p>사뿐소품 사이트 이용을 위하여 아래의 약관 동의 및 회원가입이 필요합니다.</p>
             </div>
@@ -105,189 +111,188 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
-        
+    let emailCheck = false;
+    let nickCheck = false;
 
-        let emailCheck = false;
-        let nickCheck = false;
-        function emailChecking() {
-            let youEmail = $("#youEmail").val();
-            if (youEmail == null || youEmail == '') {
-                $("#youEmailComment").text("이메일을 입력해주세요!!");
-            } else {
-                $.ajax({
-                    type: "POST",
-                    url: "adminJoinCheck.php",
-                    data: {
-                        "youEmail": youEmail,
-                        "type": "emailCheck"
-                    },
-                    dataType: "json",
-                    success: function(data) {
-                        if (data.result == "good") {
-                            $("#youEmailComment").text("사용 가능한 이메일입니다.");
-                            emailCheck = true;
-                        } else {
-                            $("#youEmailComment").text("이미 존재하는 이메일입니다.");
-                            emailCheck = false;
-                        }
-                    },
-                    error: function(request, status, error) {
-                        console.log("request" + request);
-                        console.log("status" + status);
-                        console.log("error" + error);
+    function emailChecking() {
+        let youEmail = $("#youEmail").val();
+        if (youEmail == null || youEmail == '') {
+            $("#youEmailComment").text("이메일을 입력해주세요!!");
+        } else {
+            $.ajax({
+                type: "POST",
+                url: "adminJoinCheck.php",
+                data: {
+                    "youEmail": youEmail,
+                    "type": "emailCheck"
+                },
+                dataType: "json",
+                success: function(data) {
+                    if (data.result == "good") {
+                        $("#youEmailComment").text("사용 가능한 이메일입니다.");
+                        emailCheck = true;
+                    } else {
+                        $("#youEmailComment").text("이미 존재하는 이메일입니다.");
+                        emailCheck = false;
                     }
-                })
-            }
+                },
+                error: function(request, status, error) {
+                    console.log("request" + request);
+                    console.log("status" + status);
+                    console.log("error" + error);
+                }
+            })
         }
-        function nickChecking() {
-            let youNickName = $("#youNickName").val();
-            if (youNickName == null || youNickName == '') {
-                $("#youNickNameComment").text("닉네임을 입력해주세요!!");
-            } else {
-                $.ajax({
-                    type: "POST",
-                    url: "adminJoinCheck.php",
-                    data: {
-                        "youNickName": youNickName,
-                        "type": "nickCheck"
-                    },
-                    dataType: "json",
-                    success: function(data) {
-                        if (data.result == "good") {
-                            $("#youNickNameComment").text("사용 가능한 닉네임입니다.");
-                            nickCheck = true;
-                        } else {
-                            $("#youNickNameComment").text("이미 존재하는 닉네임입니다.");
-                            nickCheck = false;
-                        }
-                    },
-                    error: function(request, status, error) {
-                        console.log("request" + request);
-                        console.log("status" + status);
-                        console.log("error" + error);
+    }
+
+    function nickChecking() {
+        let youNickName = $("#youNickName").val();
+        if (youNickName == null || youNickName == '') {
+            $("#youNickNameComment").text("닉네임을 입력해주세요!!");
+        } else {
+            $.ajax({
+                type: "POST",
+                url: "adminJoinCheck.php",
+                data: {
+                    "youNickName": youNickName,
+                    "type": "nickCheck"
+                },
+                dataType: "json",
+                success: function(data) {
+                    if (data.result == "good") {
+                        $("#youNickNameComment").text("사용 가능한 닉네임입니다.");
+                        nickCheck = true;
+                    } else {
+                        $("#youNickNameComment").text("이미 존재하는 닉네임입니다.");
+                        nickCheck = false;
                     }
-                })
-            }
+                },
+                error: function(request, status, error) {
+                    console.log("request" + request);
+                    console.log("status" + status);
+                    console.log("error" + error);
+                }
+            })
         }
-        function joinChecks() {
-            // 개인정보 동의 체크
-            let joinCheck1 = $("#joinCheck1").is(":checked");
-            let joinCheck2 = $("#joinCheck2").is(":checked");
-            let joinCheck3 = $("#joinCheck3").is(":checked");
+    }
 
-            if (joinCheck1 == false || joinCheck2 == false || joinCheck3 == false) {
-                alert("약관 전체 동의는 필수입니다.");
-                return false;
-            } else {
-                const nextBtn = document.querySelector(".join__Nbtn");
+    function joinChecks() {
+        // 개인정보 동의 체크
+        let joinCheck1 = $("#joinCheck1").is(":checked");
+        let joinCheck2 = $("#joinCheck2").is(":checked");
+        let joinCheck3 = $("#joinCheck3").is(":checked");
 
-                nextBtn.addEventListener("click", ()=>{
-                    window.location.href = 'join2.php';
-                });
-            }
-            //이메일 공백 검사
-            if ($("#youEmail").val() == "") {
-                $("#youEmailComment").text("이메일을 입력해주세요!");
-                return false;
-            }
-            //이메일 유효성 검사
-            let getYouEmail = RegExp(/^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/);
-            if (!getYouEmail.test($("#youEmail").val())) {
-                $("#youEmailComment").text("이메일을 형식에 맞게 작성해주세요!");
-                $("#youEmail").val("");
-                return false;
-            }
-            //이메일 중복 검사
-            if (emailCheck == false) {
-                $("#youEmailComment").text("이메일 중복 검사를 해주세요!");
-                return false;
-            }
-            //닉네임 공백 검사
-            if ($("#youNickName").val() == "") {
-                $("#youNickNameComment").text("닉네임을 입력해주세요!");
-                return false;
-            }
-            //닉네임 유효성 검사
-            let getYouNickName = RegExp(/^[가-힣]+$/);
-            if (!getYouNickName.test($("#youNickName").val())) {
-                $("#youNickNameComment").text("닉네임은 한글 또는 숫자만 사용 가능합니다.");
-                $("#youNickName").val("");
-                return false;
-            }
-            //닉네임 중복 검사
-            if (youNickName == false) {
-                $("#youNickNameComment").text("닉네임 중복 검사를 해주세요!");
-                return false;
-            }
-            //비밀번호 공백 검사
-            if ($("#youPass").val() == "") {
-                $("#youPassComment").text("비밀번호를 입력해주세요!");
-                return false;
-            }
-            //비밀번호 유효성 검사
-            let getYouPass = $("#youPass").val();
-            let getYouPassNum = getYouPass.search(/[0-9]/g);
-            let getYouPassEng = getYouPass.search(/[a-z]/ig);
-            let getYouPassSpe = getYouPass.search(/[`~!@@#$%^&*|₩₩₩'₩";:₩/?]/ig);
-            if (getYouPass.length < 8 || getYouPass < 20) {
-                $("#youPassComment").text("8~20자리 이내로 입력해주세요~");
-                return false;
-            } else if (getYouPass.search(/\s/) != -1) {
-                $("#youPassComment").text("비밀번호는 공백없이 입력해주세요!");
-                return false;
-            } else if (getYouPassNum < 0 || getYouPassEng < 0 || getYouPassSpe < 0) {
-                $("#youPassComment").text("영문, 숫자, 특수문자를 혼합하여 입력해주세요!");
-                return false;
-            }
-            //확인 비밀번호 공백 검사
-            if ($("#youPassC").val() == "") {
-                $("#youPassCComment").text("확인 비밀번호를 입력해주세요!");
-                return false;
-            }
-            //비밀번호 동일한지 체크
-            if ($("#youPass").val() !== $("#youPassC").val()) {
-                $("#youPassCComment").text("비밀번호가 동일하지 않습니다.");
-                return false;
-            }
-            //이름 공백 확인
-            if ($("#youName").val() == "") {
-                $("#youNameComment").text("이름을 입력해주세요!");
-                return false;
-            }
-            //이름 유효성 검사
-            let getYouName = RegExp(/^[가-힣]+$/);
-            if (!getYouName.test($("#youName").val())) {
-                $("#youNameComment").text("이름은 한글만 사용 가능합니다..");
-                $("#youName").val("");
-                return false;
-            }
-            //생년월일 공백 확인
-            if ($("#youBirth").val() == "") {
-                $("#youBirthComment").text("생년월일 (yyyy-mm-dd)입력해주세요!");
-                return false;
-            }
-            //생년월일 유효성 검사
-            let getYouBirth = RegExp(/^(19[0-9][0-9]|20\d{2})-(0[0-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$/);
-            if (!getYouBirth.test($("#youBirth").val())) {
-                $("#youBirthComment").text("생년월일이 정확하지 않습니다. 올바른 생년월일(YYYY-MM-DD)을 적어주세요!");
-                return false;
-            }
-            //휴대폰번호 공백 확인
-            if ($("#youPhone").val() == "") {
-                $("#youPhoneComment").text("휴대폰번호 (000-0000-0000) 입력해주세요!");
-                return false;
-            }
-            //휴대폰번호 유효성 검사
-            let getYouPhone = RegExp(/01[016789]-[^0][0-9]{2,3}-[0-9]{3,4}/);
-            if (!getYouPhone.test($("#youPhone").val())) {
-                $("#youPhoneComment").text("휴대폰 번호가 정확하지 않습니다. 올바른 휴대폰번호(000-0000-0000)를 입력해주세요!");
-                $("#youPhone").val("");
-                return false;
-            }
+        if (joinCheck1 == false || joinCheck2 == false || joinCheck3 == false) {
+            alert("약관 전체 동의는 필수입니다.");
+            return false;
+        } else {
+            const nextBtn = document.querySelector(".join__Nbtn");
+
+            nextBtn.addEventListener("click", () => {
+                window.location.href = 'join2.php';
+            });
         }
-
-
-        
+        //이메일 공백 검사
+        if ($("#youEmail").val() == "") {
+            $("#youEmailComment").text("이메일을 입력해주세요!");
+            return false;
+        }
+        //이메일 유효성 검사
+        let getYouEmail = RegExp(/^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/);
+        if (!getYouEmail.test($("#youEmail").val())) {
+            $("#youEmailComment").text("이메일을 형식에 맞게 작성해주세요!");
+            $("#youEmail").val("");
+            return false;
+        }
+        //이메일 중복 검사
+        if (emailCheck == false) {
+            $("#youEmailComment").text("이메일 중복 검사를 해주세요!");
+            return false;
+        }
+        //닉네임 공백 검사
+        if ($("#youNickName").val() == "") {
+            $("#youNickNameComment").text("닉네임을 입력해주세요!");
+            return false;
+        }
+        //닉네임 유효성 검사
+        let getYouNickName = RegExp(/^[가-힣]+$/);
+        if (!getYouNickName.test($("#youNickName").val())) {
+            $("#youNickNameComment").text("닉네임은 한글 또는 숫자만 사용 가능합니다.");
+            $("#youNickName").val("");
+            return false;
+        }
+        //닉네임 중복 검사
+        if (youNickName == false) {
+            $("#youNickNameComment").text("닉네임 중복 검사를 해주세요!");
+            return false;
+        }
+        //비밀번호 공백 검사
+        if ($("#youPass").val() == "") {
+            $("#youPassComment").text("비밀번호를 입력해주세요!");
+            return false;
+        }
+        //비밀번호 유효성 검사
+        let getYouPass = $("#youPass").val();
+        let getYouPassNum = getYouPass.search(/[0-9]/g);
+        let getYouPassEng = getYouPass.search(/[a-z]/ig);
+        let getYouPassSpe = getYouPass.search(/[`~!@@#$%^&*|₩₩₩'₩";:₩/?]/ig);
+        if (getYouPass.length < 8 || getYouPass < 20) {
+            $("#youPassComment").text("8~20자리 이내로 입력해주세요~");
+            return false;
+        } else if (getYouPass.search(/\s/) != -1) {
+            $("#youPassComment").text("비밀번호는 공백없이 입력해주세요!");
+            return false;
+        } else if (getYouPassNum < 0 || getYouPassEng < 0 || getYouPassSpe < 0) {
+            $("#youPassComment").text("영문, 숫자, 특수문자를 혼합하여 입력해주세요!");
+            return false;
+        }
+        //확인 비밀번호 공백 검사
+        if ($("#youPassC").val() == "") {
+            $("#youPassCComment").text("확인 비밀번호를 입력해주세요!");
+            return false;
+        }
+        //비밀번호 동일한지 체크
+        if ($("#youPass").val() !== $("#youPassC").val()) {
+            $("#youPassCComment").text("비밀번호가 동일하지 않습니다.");
+            return false;
+        }
+        //이름 공백 확인
+        if ($("#youName").val() == "") {
+            $("#youNameComment").text("이름을 입력해주세요!");
+            return false;
+        }
+        //이름 유효성 검사
+        let getYouName = RegExp(/^[가-힣]+$/);
+        if (!getYouName.test($("#youName").val())) {
+            $("#youNameComment").text("이름은 한글만 사용 가능합니다..");
+            $("#youName").val("");
+            return false;
+        }
+        //생년월일 공백 확인
+        if ($("#youBirth").val() == "") {
+            $("#youBirthComment").text("생년월일 (yyyy-mm-dd)입력해주세요!");
+            return false;
+        }
+        //생년월일 유효성 검사
+        let getYouBirth = RegExp(/^(19[0-9][0-9]|20\d{2})-(0[0-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$/);
+        if (!getYouBirth.test($("#youBirth").val())) {
+            $("#youBirthComment").text("생년월일이 정확하지 않습니다. 올바른 생년월일(YYYY-MM-DD)을 적어주세요!");
+            return false;
+        }
+        //휴대폰번호 공백 확인
+        if ($("#youPhone").val() == "") {
+            $("#youPhoneComment").text("휴대폰번호 (000-0000-0000) 입력해주세요!");
+            return false;
+        }
+        //휴대폰번호 유효성 검사
+        let getYouPhone = RegExp(/01[016789]-[^0][0-9]{2,3}-[0-9]{3,4}/);
+        if (!getYouPhone.test($("#youPhone").val())) {
+            $("#youPhoneComment").text("휴대폰 번호가 정확하지 않습니다. 올바른 휴대폰번호(000-0000-0000)를 입력해주세요!");
+            $("#youPhone").val("");
+            return false;
+        }
+    }
     </script>
 </body>
+
 </html>

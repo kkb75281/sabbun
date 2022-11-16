@@ -1,5 +1,10 @@
+<?php
+    include "../connect/connect.php";
+    include "../connect/session.php";
+?>
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,6 +16,7 @@
     <link rel="stylesheet" href="../html/assets/css/common.css">
     <link rel="stylesheet" href="../html/assets/css/join.css">
 </head>
+
 <body>
     <header id="header" class="header">
         <div class="logo">
@@ -28,7 +34,7 @@
                     함께 해주셔서 감사합니다 :)
                 </h1>
                 <p>로그인하시면 더욱 다양한 서비스와 혜택을 제공 받으실 수 있습니다.</p>
-<?php
+                <?php
     include "../connect/connect.php";
 
     $youEmail = $_POST['youEmail'];
@@ -74,9 +80,9 @@
                 $blogImgName = "Img_".time().rand(1,99999)."."."{$fileExtension}";
                 //echo "이미지 파일이 맞네요!";
                 $sql = "INSERT INTO myBMember(youEmail, youNickName, youName, youPass, youPhone, youShop, youAdress, youShopNum, regTime, blogImgFile, blogImgSize) VALUES('$youEmail', '$youNickName', '$youName', '$youPass', '$youPhone', '$youShop', '$youAdress', '$youShopNum', '$regTime', '$blogImgName', '$blogImgSize' )";
-            } else {
-                echo "<script>alert('지원하는 이미지 파일이 아닙니다.'); history.back(1)</script>";
-            }
+            } 
+        }else {
+            echo "<script>alert('지원하는 이미지 파일이 아닙니다.'); history.back(1)</script>";
         }
     } else {
         echo "<p>프로필 사진을 첨부하지 않았습니다. <br> 마이 페이지에서 추가 해주세요!</p>";
@@ -115,4 +121,5 @@
         </section>
     </main>
 </body>
+
 </html>

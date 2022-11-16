@@ -23,7 +23,12 @@
     $sql = "UPDATE myBMember SET youPass = '{$youPass}' WHERE myMemberID = '{$myMemberID}'";
     $connect -> query($sql);
     
-    "<script>alert('비밀 번호가 수정됐습니다.'); history.back(1)</script>";
-        Header("Location: ../main/main.php");
+    echo '<script type="text/javascript">'; 
+    echo 'alert("비밀번호가 수정됐습니다.");'; 
+    echo 'window.location.href = "../login/login.php";';
+    //echo 'history.back(1)';
+    echo '</script>';
+
+
     
 ?>

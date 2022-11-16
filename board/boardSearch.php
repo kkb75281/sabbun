@@ -1,10 +1,10 @@
 <?php
     include "../connect/connect.php";
     include "../connect/session.php";
-    include "../connect/sessionCheck.php";
 ?>
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../html/assets/css/footer.css">
     <link rel="stylesheet" href="../html/assets/css/board.css">
 </head>
+
 <body>
     <?php include "../include/header.php" ?>
     <!-- // header -->
@@ -28,7 +29,7 @@
                 <div class="board__title">
                     <h3>Free Board</h3>
                     <p>자유 게시판입니다.</p>
-<?php
+                    <?php
     if(isset($_GET['page'])){
         $page = (int) $_GET['page'];
     } else {
@@ -81,7 +82,7 @@
                             </tr>
                         </thead>
                         <tbody>
-<?php
+                            <?php
     $viewNum = 10;
     $viewLimit = ($viewNum * $page) - $viewNum;
     $sql = $sql."LIMIT {$viewLimit}, {$viewNum}";
@@ -136,7 +137,7 @@
                 </div>
                 <div class="board__pages">
                     <ul>
-<?php
+                        <?php
     // echo $totalCount;
     // 총 페이지 갯수
     $boardCount = ceil($totalCount/$viewNum);
@@ -188,4 +189,5 @@
     <?php include "../include/footer.php" ?>
     <!-- // footer -->
 </body>
+
 </html>

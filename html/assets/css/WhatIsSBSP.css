@@ -1,0 +1,312 @@
+/* intro */
+.intro__wrap {
+}
+.intro__inner {
+  /* width: 100%; */
+  background: #4461f2;
+  margin-top: 75px;
+  height: 283px;
+  padding: 100px;
+}
+.intro__cont {
+  padding: 100px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.intro__inner .intro__cont .intro__img {
+  width: 30%;
+}
+.intro__inner .intro__cont .intro__img .img__Background {
+  position: relative;
+
+  background: url(../img/intro_img/gradiant_e.svg) no-repeat;
+  background-size: contain;
+  width: 300px;
+  height: 300px;
+}
+.intro__inner .intro__img .img__Background .img1 {
+  position: absolute;
+  background: url(../img/intro_img/sandclock.svg) no-repeat;
+  background-size: contain;
+  width: 190px;
+  height: 190px;
+  top: 1px;
+  left: 1px;
+}
+.intro__inner .intro__img .img__Background .img2 {
+  position: absolute;
+  background: url(../img/intro_img/papertray.svg) no-repeat;
+  background-size: contain;
+  width: 190px;
+  height: 190px;
+  top: 1px;
+  left: 200px;
+}
+.intro__inner .intro__img .img__Background .img3 {
+  position: absolute;
+  background: url(../img/intro_img/pin.svg) no-repeat;
+  background-size: contain;
+  width: 190px;
+  height: 190px;
+  top: 150px;
+  left: 100px;
+}
+.intro__inner .intro__desc {
+  position: relative;
+  color: #fff;
+  width: 60%;
+}
+
+.intro__inner .intro__desc h1 {
+  font-size: 50px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+.intro__inner .intro__desc h2 {
+  position: absolute;
+  top: -30px;
+  left: -68px;
+  font-size: 65px;
+  font-weight: 700;
+  opacity: 0.15;
+}
+
+.intro__inner .intro__desc p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+  word-break: keep-all;
+}
+
+/* sliderIntro */
+.sliderIntro__inner {
+  margin-top: 100px;
+}
+.sliderIntro__slide {
+  overflow: hidden;
+  width: 100%;
+  padding: 50px;
+}
+
+.sliderIntro__desc h2 {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #4461f2;
+  text-align: right;
+}
+
+.sliderIntro__desc p {
+  float: right;
+  width: 600px;
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 80px;
+  color: #4461f2;
+  text-align: right;
+  line-height: 1.5;
+}
+.slider__box {
+  width: 600vh;
+  display: flex;
+  flex-wrap: wrap;
+  animation: bannermove 20s linear infinite;
+}
+@keyframes bannermove {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-50%, 0);
+  }
+}
+
+.sliderIntro__slide .slider__box .slide1 {
+  background: url(../img/store1.jpg);
+  width: 50vh;
+  height: 50vh;
+  background-size: contain;
+  border-radius: 10px;
+  margin: 5vh;
+}
+.sliderIntro__slide .slider__box .slide2 {
+  background: url(../img/store2.jpg);
+  width: 50vh;
+  height: 50vh;
+  background-size: contain;
+  border-radius: 10px;
+  margin: 5vh;
+}
+.sliderIntro__slide .slider__box .slide3 {
+  background: url(../img/store3.jpg);
+  width: 50vh;
+  height: 50vh;
+  background-size: contain;
+  border-radius: 10px;
+  margin: 5vh;
+}
+.sliderIntro__slide .slider__box .slide4 {
+  background: url(../img/store4.jpg);
+  width: 50vh;
+  height: 50vh;
+  background-size: contain;
+  border-radius: 10px;
+  margin: 5vh;
+}
+.sliderIntro__slide .slider__box .slide5 {
+  background: url(../img/store5.jpg);
+  width: 50vh;
+  height: 50vh;
+  background-size: contain;
+  border-radius: 10px;
+  margin: 5vh;
+}
+
+/* progressIntro */
+
+.progressIntro__wrap {
+}
+.progressIntro__inner {
+  width: 100%;
+  background: #4461f2;
+  margin-top: 75px;
+  padding: 120px 0;
+  height: 400px;
+}
+.progressIntro__cont {
+  padding: 140px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.progress__box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  color: #fff;
+  margin-top: 110px;
+}
+
+.progressIntro__desc {
+  width: 35%;
+  color: #fff;
+}
+.progressIntro__desc h2 {
+  font-size: 50px;
+  font-weight: 700;
+  margin-bottom: 60px;
+}
+.progressIntro__desc p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+.progressIntro__img {
+  width: 60%;
+  position: relative;
+}
+
+.progressIntro__img .img1 {
+  position: absolute;
+  background: url(../img/intro_img/Progress_calendar.svg) no-repeat;
+  background-size: contain;
+  width: 364px;
+  height: 364px;
+  bottom: -90px;
+  right: 313px;
+}
+.progressIntro__img .img2 {
+  position: absolute;
+  background: url(../img/intro_img/Progress_arrow.svg) no-repeat;
+  background-size: contain;
+  width: 380px;
+  height: 380px;
+  bottom: 1px;
+  right: 1px;
+}
+.progressIntro__img .img3 {
+  position: absolute;
+  background: url(../img/intro_img/Progress_cup.svg) no-repeat;
+  background-size: contain;
+  width: 185px;
+  height: 185px;
+  bottom: -75px;
+  right: 150px;
+}
+
+/* progress Bar */
+.progress__bar {
+  margin: 50px auto;
+}
+.progress__bar .progress__dot {
+  display: inline-block;
+  width: 2vh;
+  height: 2vh;
+  background: #fff;
+  border-radius: 50%;
+  /* margin: 30px 150px 0px 50px; */
+}
+
+.progress1 {
+  align-items: center;
+}
+.progress__bar .progress__border {
+  width: 100%;
+  border-bottom: 3px solid #fff;
+}
+
+/* SBSPISPresent */
+
+.SBSPISPresent__wrap {
+}
+.SBSPISPresent__inner {
+  padding: 165px;
+  margin: 0 auto;
+}
+.SBSPISPresent__inner h3 {
+  text-align: center;
+  font-size: 25px;
+  line-height: 1.5;
+  color: #4461f2;
+  font-weight: 600;
+  margin-top: 100px;
+}
+.SBSPISPresent__inner .SBSPISPresetn__img {
+  padding: 50px;
+  box-sizing: border-box;
+}
+.SBSPISPresent__inner .SBSPISPresetn__img .img_box {
+  background: url(../img/intro_img/Prsesent_present.svg) no-repeat;
+  background-size: contain;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+}
+.SBSPISPresent__inner .SBSPISPresetn__img .img_bulb {
+  background: url(../img/intro_img/Present_bulb.svg);
+  background-size: contain;
+  width: 212px;
+  height: 212px;
+}
+.SBSPISPresent__inner .SBSPISPresetn__img .img_heart {
+  background: url(../img/intro_img/Present_heart.svg);
+  background-size: contain;
+  width: 196px;
+  height: 196px;
+}
+.SBSPISPresent__inner a {
+  text-align: center;
+  width: 100px;
+  display: block;
+  margin: 0 auto;
+  padding: 20px;
+  background: #4461f2;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 14px;
+  transition: all 0.3s;
+  margin-bottom: 100px;
+}
+.SBSPISPresent__inner a:hover {
+  background: #2e3f93;
+}

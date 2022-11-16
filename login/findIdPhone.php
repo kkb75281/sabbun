@@ -1,5 +1,10 @@
+<?php
+    include "../connect/connect.php";
+    include "../connect/session.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,6 +19,7 @@
     <link rel="stylesheet" href="../html/assets/css/find.css">
     <link rel="stylesheet" href="../html/assets/css/footer.css">
 </head>
+
 <body>
     <?php include "../include/header.php" ?>
     <!-- // header -->
@@ -49,11 +55,13 @@
                             <legend>로그인 입력폼</legend>
                             <div>
                                 <label for="youEmail">이메일</label>
-                                <input type="email" name="youEmail" id="youEmail" placeholder="이메일" class="input__style" required>
+                                <input type="email" name="youEmail" id="youEmail" placeholder="이메일" class="input__style"
+                                    required>
                             </div>
                             <div>
                                 <label for="youPass">비밀번호</label>
-                                <input type="password" name="youPass" id="youPass" placeholder="비밀번호" class="input__style" required>
+                                <input type="password" name="youPass" id="youPass" placeholder="비밀번호"
+                                    class="input__style" required>
                             </div>
                             <button type="submit" class="input__button">로그인</button>
                             <div class="sub__input">
@@ -99,7 +107,8 @@
                         <legend>아이디 찾기 입력폼</legend>
                         <div>
                             <label for="youPhone" class="ir">휴대폰 번호</label>
-                            <input type="text" name="youPhone" id="youPhone" placeholder="휴대폰 번호를 입력해주세요!" class="input__style" required>
+                            <input type="text" name="youPhone" id="youPhone" placeholder="휴대폰 번호를 입력해주세요!"
+                                class="input__style" required>
                         </div>
                         <button type="submit" class="btn input_phone">입력</button>
                     </fieldset>
@@ -111,12 +120,13 @@
 
 </body>
 <script>
-    const findidPhone = document.querySelector(".findid__phone");
-    const findidClose2 = document.querySelector(".findid__inner .cb2");
+const findidPhone = document.querySelector(".findid__phone");
+const findidClose2 = document.querySelector(".findid__inner .cb2");
 
-    findidClose2.addEventListener("click", ()=>{
-        findidPhone.classList.remove("open");
-        location.replace("login.php");
-    });
+findidClose2.addEventListener("click", () => {
+    findidPhone.classList.remove("open");
+    location.replace("login.php");
+});
 </script>
+
 </html>

@@ -1,5 +1,10 @@
+<?php
+    include "../connect/connect.php";
+    include "../connect/session.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,6 +19,7 @@
     <link rel="stylesheet" href="../html/assets/css/find.css">
     <link rel="stylesheet" href="../html/assets/css/footer.css">
 </head>
+
 <body>
     <?php include "../include/header.php" ?>
     <!-- // header -->
@@ -49,11 +55,13 @@
                             <legend>로그인 입력폼</legend>
                             <div>
                                 <label for="youEmail">이메일</label>
-                                <input type="email" name="youEmail" id="youEmail" placeholder="이메일" class="input__style" required>
+                                <input type="email" name="youEmail" id="youEmail" placeholder="이메일" class="input__style"
+                                    required>
                             </div>
                             <div>
                                 <label for="youPass">비밀번호</label>
-                                <input type="password" name="youPass" id="youPass" placeholder="비밀번호" class="input__style" required>
+                                <input type="password" name="youPass" id="youPass" placeholder="비밀번호"
+                                    class="input__style" required>
                             </div>
                             <button type="submit" class="input__button">로그인</button>
                             <div class="sub__input">
@@ -105,12 +113,13 @@
 
 </body>
 <script>
-    const findpwPopup = document.querySelector(".findpw__popup");
-    const findpwClose1 = document.querySelector(".findpw__inner .cb5");
+const findpwPopup = document.querySelector(".findpw__popup");
+const findpwClose1 = document.querySelector(".findpw__inner .cb5");
 
-    findpwClose1.addEventListener("click", ()=>{
-        findpwPopup.classList.remove("open");
-        location.replace("login.php");
-    });
+findpwClose1.addEventListener("click", () => {
+    findpwPopup.classList.remove("open");
+    location.replace("login.php");
+});
 </script>
+
 </html>

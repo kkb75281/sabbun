@@ -2,10 +2,16 @@
     include "../connect/connect.php";
     include "../connect/session.php";
     include "../connect/sessionCheck.php";
+
+   
+
+
 ?>
 
 <!DOCTYPE html>
 <html lang="ko">
+
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -34,7 +40,7 @@
                 </div>
                 <div class="gray board__writeInner">
                     <div class="board__write container">
-                        <form action="boardWriteSave.php" name="boardWrite" method="post">
+                        <form action="boardWriteSave.php" name="boardWrite" method="post" enctype="multipart/form-data">
                             <fieldset>
                                 <legend>게시판 작성 영역</legend>
                                 <div class="board__modify__fieldset__div">
@@ -75,18 +81,18 @@
                                 <!-- 파일 업로드 -->
                                 <div class="filebox bs3-primary">
                                     <span>첨부파일1</span>
-                                    <input class="upload-name" value="파일선택" disabled="disabled">
+                                    <input class="upload-name" type="file" name="boardFile" id="boardFile"
+                                        accept=".jpg, .jpeg, .png, .gif">
+                                    <label for="boardFile">업로드</label>
 
-                                    <label for="ex_filename">업로드</label>
-                                    <input type="file" id="ex_filename" class="upload-hidden">
                                 </div>
-                                <div class="filebox bs3-primary">
+                                <!-- <div class="filebox bs3-primary">
                                     <span>첨부파일2</span>
                                     <input class="upload-name" value="파일선택" disabled="disabled">
 
                                     <label for="ex_filename">업로드</label>
                                     <input type="file" id="ex_filename" class="upload-hidden">
-                                </div>
+                                </div> -->
                                 <!-- 비밀번호 -->
                                 <!-- <div class="filebox bs3-primary">
                                     <span>비밀번호</span>

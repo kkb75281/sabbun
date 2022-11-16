@@ -43,8 +43,8 @@
                         <h2><?=$myPageInfo['youName']?> 님</h2>
                         <ul>
                             <li>손님 회원</li>
-                            <li>kkb7528@naver.com</li>
-                            <li>010-0000-0000</li>
+                            <li><?=$myPageInfo['youEmail']?></li>
+                            <li><?=$myPageInfo['youPhone']?></li>
                         </ul>
                     </div>
                 </div>
@@ -59,17 +59,17 @@
                                         <div class="disabled">
                                             <label for="youName">이름</label>
                                             <input type="text" id="youName" name="youName" maxlength="5"
-                                                placeholder="<?=$memberInfo['youName'];?>" disabled>
+                                                placeholder="<?=$myPageInfo['youName'];?>" disabled>
                                         </div>
                                         <div class="disabled">
                                             <label for="youNickName">닉네임</label>
                                             <input type="text" id="youNickName" name="youNickName"
-                                                placeholder="<?=$memberInfo{'youNickName'}?>" disabled>
+                                                placeholder="<?=$myPageInfo{'youNickName'}?>" disabled>
                                         </div>
                                         <div class="disabled">
                                             <label for="youEmail">이메일</label>
                                             <input type="email" id="youEmail" name="youEmail"
-                                                placeholder="<?=$memberInfo{'youEmail'}?>" disabled>
+                                                placeholder="<?=$myPageInfo{'youEmail'}?>" disabled>
                                         </div>
                                         <div class="overlap">
                                             <label for="youPass">비밀번호</label>
@@ -91,8 +91,8 @@
                                         <div>
                                             <label for="youPhone">휴대폰 번호</label>
                                             <input type="text" id="youPhone" name="youPhone" maxlength="15"
-                                                placeholder="<?=$memberInfo{'youPhone'}?>"
-                                                value="<?=$memberInfo{'youPhone'}?>" required>
+                                                placeholder="<?=$myPageInfo{'youPhone'}?>"
+                                                value="<?=$myPageInfo{'youPhone'}?>" required>
                                             <p class="msg" id="youPhoneComment">
                                                 <!-- * 형식이 맞지 않습니다.(010-0000-0000) -->
                                             </p>
@@ -134,7 +134,7 @@
                     <ul>
                         <li class="active"><a href="myPage.php">회원 정보 수정</a></li>
                         <li><a href="myPageBoard.php">게시물</a></li>
-                        <li><a href="myPageLike.php">관심 리스트</a></li>
+                        <!-- <li><a href="myPageLike.php">관심 리스트</a></li> -->
                     </ul>
                 </div>
             </section>
