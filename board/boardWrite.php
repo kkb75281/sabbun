@@ -47,7 +47,7 @@
                                     <input type="text" name="boardTitle" id="boardTitle" placeholder="제목을 입력해주세요!">
                                 </div>
                                 <div class="board__writteLine"></div>
-                                <div class="write__setting">
+                                <!-- <div class="write__setting">
                                     <select name="문단" id="pg">
                                         <option value="1">문단</option>
                                         <option value="2">1</option>
@@ -71,7 +71,7 @@
                                     </select>
                                     <button class="b">B</button>
                                     <button class="i">i</button>
-                                </div>
+                                </div> -->
                                 <div class="board__writteLine"></div>
                                 <div class="board__modify__fieldset__div">
                                     <textarea name="boardContents" id="boardContents" placeholder="글 내용을 입력해주세요!"
